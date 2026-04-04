@@ -10,8 +10,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-snap-type:y mandatory}
 body{font-family:'Open Sans',sans-serif;color:var(--gr);background:var(--bk);overflow-x:hidden}
-.slide::before,.slide::after{pointer-events:none}
-.slide{height:100vh;scroll-snap-align:start;position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;overflow:hidden;padding:4rem 2rem}
+.slide{min-height:100vh;scroll-snap-align:start;position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;overflow:hidden;padding:4rem 2rem}
 .inner{max-width:1100px;width:100%;position:relative;z-index:2}
 .slbl{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
 .stl{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(2rem,5vw,3.2rem);text-transform:uppercase;letter-spacing:-.02em;line-height:1.05;margin-bottom:1.5rem}
@@ -26,13 +25,13 @@ body{font-family:'Open Sans',sans-serif;color:var(--gr);background:var(--bk);ove
 .ph.dk{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12);color:rgba(255,255,255,.3)}
 
 /* HERO */
-.s1{background:linear-gradient(160deg,#071e3d,#0f4282,#1e6db5)}.s1::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 90% 60% at 50% -5%,rgba(255,255,255,.13),transparent 55%),radial-gradient(ellipse 60% 50% at 100% 100%,rgba(8,32,64,.3),transparent 55%)}
-.s1::after{content:'';position:absolute;top:0;right:0;width:40%;height:100%;background:linear-gradient(135deg,transparent 45%,rgba(255,255,255,.03) 45%,rgba(255,255,255,.01) 55%,transparent 55%);pointer-events:none}
+.s1{background:var(--bk)}.s1::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 120% 80% at 50% 0%,rgba(15,42,74,.95),transparent 70%),radial-gradient(ellipse 80% 60% at 80% 100%,rgba(42,122,184,.3),transparent 60%)}
+.s1::after{content:'';position:absolute;top:0;right:0;width:40%;height:100%;background:linear-gradient(135deg,transparent 45%,rgba(234,165,74,.05) 45%,rgba(234,165,74,.02) 55%,transparent 55%);pointer-events:none}
 .hc{position:relative;z-index:2;text-align:center;max-width:900px}
-.hb{display:inline-block;padding:8px 28px;border:1.5px solid rgba(255,255,255,.55);border-radius:40px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:2rem;animation:fadeIn 1s .2s both}
+.hb{display:inline-block;padding:8px 28px;border:1.5px solid var(--gold);border-radius:40px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;animation:fadeIn 1s .2s both}
 .hlogo{margin-bottom:1.5rem;animation:fadeIn 1s .3s both}
 .hlogo svg{height:130px;width:auto}
-.hd{font-family:'Montserrat',sans-serif;font-weight:700;font-size:clamp(1rem,2.2vw,1.5rem);color:rgba(255,255,255,.92);margin-top:1.5rem;letter-spacing:.08em;animation:fadeUp 1s .6s both}
+.hd{font-family:'Montserrat',sans-serif;font-weight:700;font-size:clamp(1rem,2.2vw,1.5rem);color:var(--bl-lt);margin-top:1.5rem;letter-spacing:.08em;animation:fadeUp 1s .6s both}
 .hl{font-size:.95rem;color:rgba(255,255,255,.4);margin-top:.8rem;letter-spacing:.12em;text-transform:uppercase;animation:fadeUp 1s .8s both}
 .hls{display:flex;align-items:center;justify-content:center;gap:2.5rem;margin-top:2.5rem;animation:fadeIn 1s 1s both}
 .hls span{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.75rem;color:rgba(255,255,255,.3);letter-spacing:.12em;text-transform:uppercase}
@@ -156,7 +155,7 @@ body{font-family:'Open Sans',sans-serif;color:var(--gr);background:var(--bk);ove
 .lc.c1{border-bottom:3px solid #eaa54a}.lc.c2{border-bottom:3px solid var(--bl-lt)}.lc.c3{border-bottom:3px solid #8B0000}.lc.c4{border-bottom:3px solid #00A3A3}.lc.c5{border-bottom:3px solid #26A69A}.lc.c6{border-bottom:3px solid #5C6BC0}
 
 /* CONTACTO */
-.s11{background:linear-gradient(160deg,#071e3d,#0f4282,#1e6db5);position:relative}.s11::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 90% 60% at 50% -5%,rgba(255,255,255,.1),transparent 55%),radial-gradient(ellipse 60% 50% at 100% 100%,rgba(8,32,64,.25),transparent 50%)}
+.s11{background:var(--bk);position:relative}.s11::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(15,42,74,.5),transparent 70%)}
 .s11 .inner{text-align:center}
 .ctt{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.7rem,4vw,2.6rem);color:var(--wh);text-transform:uppercase;line-height:1.1;margin-bottom:1rem}
 .cts{font-size:.95rem;color:rgba(255,255,255,.4);margin-bottom:2.5rem;max-width:550px;margin-left:auto;margin-right:auto}
@@ -173,14 +172,19 @@ body{font-family:'Open Sans',sans-serif;color:var(--gr);background:var(--bk);ove
 .cftr{margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.04);font-size:.68rem;color:rgba(255,255,255,.15);letter-spacing:.08em}
 .cap{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;margin-top:.45rem;padding:3px 10px;display:inline-block;border-radius:4px;background:rgba(52,137,202,.08);color:var(--bl-lt);border:1px solid rgba(52,137,202,.18)}
 .cap.dk{background:rgba(255,255,255,.05);color:rgba(255,255,255,.35);border-color:rgba(255,255,255,.1)}
+/* SLIDE LOGO */
 .slide-logo{position:absolute;bottom:1.1rem;left:50%;transform:translateX(-50%);z-index:10;pointer-events:none;text-align:center}
 .slide-logo img{height:52px;width:auto;display:block;opacity:.6}
-
+/* SLIDE COUNTER */
+.slide-num{position:absolute;bottom:1.15rem;right:1.4rem;z-index:10;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.65rem;letter-spacing:.1em;pointer-events:none;line-height:1}
+.slide-num .cur{color:rgba(255,255,255,.8)}
+.slide-num .sep,.slide-num .tot{color:rgba(255,255,255,.28)}
+.s2 .slide-num .cur,.s4 .slide-num .cur,.s6 .slide-num .cur,.s8 .slide-num .cur,.s10 .slide-num .cur{color:rgba(0,0,0,.5)}
+.s2 .slide-num .sep,.s4 .slide-num .sep,.s6 .slide-num .sep,.s8 .slide-num .sep,.s10 .slide-num .sep,.s2 .slide-num .tot,.s4 .slide-num .tot,.s6 .slide-num .tot,.s8 .slide-num .tot,.s10 .slide-num .tot{color:rgba(0,0,0,.2)}
 /* SLIDE 2 GRID */
 .s2g{display:grid;grid-template-columns:1fr 1.5fr;gap:2.5rem;align-items:center}
 .s2img{border-radius:16px;overflow:hidden;height:72vh}
-
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVE */
 @media(max-width:1024px){
   .slide{padding:3rem 1.5rem}
   .stl{font-size:clamp(1.6rem,4vw,2.6rem)}
@@ -193,59 +197,44 @@ body{font-family:'Open Sans',sans-serif;color:var(--gr);background:var(--bk);ove
   .stl{margin-bottom:.8rem}
   .sdsc{margin-bottom:1.2rem;font-size:.92rem;line-height:1.6}
   .slbl{margin-bottom:.6rem}
-  /* Hero */
   .hb{padding:6px 16px;font-size:.62rem;margin-bottom:1rem}
   .hd{font-size:clamp(.85rem,3vw,1.1rem)}
   .hl{font-size:.78rem;margin-top:.5rem}
   .hls{gap:1.2rem;margin-top:1.5rem}
-  .hls svg[width="120"]{width:80px!important}
-  .hls svg[width="90"]{width:65px!important}
   .sa{bottom:.8rem}
-  /* Slide 2 */
   .s2g{grid-template-columns:1fr;gap:1.2rem}
   .s2img{height:30vh}
   .abg{gap:1rem}
   .pl{padding:1.2rem}
   .pl h3{font-size:.85rem}
   .pl p{font-size:.8rem}
-  /* Slide 3 */
   .sr{gap:.8rem;margin-top:1rem}
   .sc{padding:1.1rem .7rem;min-width:calc(33% - .6rem)}
   .si{margin-top:1.2rem;gap:1rem}
-  /* Slide 4 */
   .primg{min-height:220px}
   .ti{gap:.9rem;padding:.7rem 0}
   .td{width:36px;min-width:36px;height:36px;font-size:.55rem}
   .tc h3{font-size:.9rem}
   .tc p{font-size:.78rem}
-  /* Slide 5 */
   .cb{padding:1.3rem}
-  .cr{padding:.5rem .8rem}
   .fb{margin-top:1.2rem;padding:1rem}
-  /* Slide 6 */
   .simg{gap:1rem;margin-bottom:1.2rem}
   .sg{gap:.9rem}
   .sf{padding:1.1rem .7rem}
   .sf .ic{width:36px;height:36px}
-  /* Slide 7 */
   .vd{font-size:.88rem;margin-bottom:1.2rem}
   .vc .vi{height:130px}
   .vc .vb{padding:.8rem 1rem}
   .vc h4{font-size:.78rem}
   .vc p{font-size:.74rem}
-  /* Slide 8 */
   .bn{padding:1.2rem}
   .bn h4{font-size:.82rem}
-  .bn p{font-size:.78rem}
-  /* Slide 9 */
   .ts{grid-template-columns:1fr;margin-top:1.2rem;gap:1rem}
   .th{padding:1rem 1rem .6rem}
   .tb{padding:.5rem 1rem 1rem}
   .tb li{font-size:.78rem;padding:.3rem 0}
-  /* Slide 10 */
   .ed{margin-bottom:1.2rem;font-size:.88rem}
   .lc{min-height:90px;padding:1.1rem .9rem}
-  /* Slide 11 */
   .ctt{font-size:clamp(1.4rem,5vw,2rem)}
   .cts{margin-bottom:1.5rem;font-size:.85rem}
   .ccs{margin-bottom:1.5rem;gap:1rem}
@@ -253,28 +242,23 @@ body{font-family:'Open Sans',sans-serif;color:var(--gr);background:var(--bk);ove
   .cbtn{padding:11px 28px;font-size:.82rem}
   .cls{margin-bottom:1rem;gap:1.2rem}
   .slide-logo img{height:38px}
+  .slide-num{font-size:.58rem;right:1rem}
 }
 @media(max-width:480px){
   .slide{padding:1.8rem .9rem}
   .sc{min-width:calc(50% - .4rem)}
   .simg{grid-template-columns:1fr 1fr!important}
-  .sg{grid-template-columns:1fr 1fr!important}
   .vg{grid-template-columns:1fr 1fr!important}
   .bg{grid-template-columns:1fr 1fr!important}
   .lr{grid-template-columns:1fr 1fr!important}
   .ts{grid-template-columns:1fr!important}
   .slide-logo img{height:30px}
+  .slide-num{font-size:.52rem}
 }
-@media(max-width:360px){
-  .sc{min-width:100%}
-  .simg,.sg,.vg,.bg,.lr{grid-template-columns:1fr!important}
-}
-/* Landscape mobile */
 @media(max-height:500px) and (orientation:landscape){
   .slide{padding:1.5rem 1.5rem}
   .hlogo img{height:min(140px,30vh)!important}
   .hb{margin-bottom:.6rem}
-  .hd,.hl{margin-top:.4rem}
   .hls{margin-top:1rem}
   .slide-logo img{height:28px}
 }
@@ -287,7 +271,7 @@ body{font-family:'Open Sans',sans-serif;color:var(--gr);background:var(--bk);ove
 <div class="fl"></div>
 <div class="hc">
 <div class="hb">Propuesta de Patrocinio</div>
-<div class="hlogo"><img src="logos/logo-color-CJI.svg" style="height:min(320px,42vh);width:auto" alt="Copa Junior Internacional"></div>
+<div class="hlogo"><img src="logos/logo-color-CJI.svg" style="height:130px;width:auto" alt="Copa Junior Internacional"></div>
 <p class="hd">Del 9 al 12 de Octubre — 2026</p>
 <p class="hl">Solanas Punta del Este — Uruguay</p>
 <div class="hls">
@@ -311,22 +295,18 @@ body{font-family:'Open Sans',sans-serif;color:var(--gr);background:var(--bk);ove
 
 <!-- SLIDE 2 MÁS QUE FÚTBOL -->
 <section class="slide s2">
-<div class="inner" style="max-width:1100px">
-<div class="s2g">
-  <!-- Imagen izquierda -->
-  <div class="s2img a d2"><img src="fotos/Complejo.jpeg" style="width:100%;height:100%;object-fit:cover" alt="Complejo Solanas"></div>
-  <!-- Contenido derecha -->
-  <div>
-    <div class="slbl a">Sobre el evento</div>
-    <h2 class="stl a d1" style="color:var(--bl);margin-bottom:1rem">Más que Fútbol</h2>
-    <p class="sdsc a d2" style="margin-bottom:1.5rem;font-size:.95rem">La Copa Junior Internacional es una experiencia inolvidable para futbolistas, cuerpos técnicos y familiares. Este evento combina nivel competitivo, naturaleza e intercambio cultural en Solanas Punta del Este.</p>
-    <div class="abg a d3">
-      <div class="pl"><div class="plb">Competencia</div><h3>Élite Internacional</h3><p>Equipos de múltiples países en formato profesional con Copa de Oro y Copa de Plata.</p></div>
-      <div class="pl"><div class="plb">Cultura</div><h3>Intercambio Global</h3><p>Jugadores de distintas nacionalidades compartiendo la pasión por el fútbol.</p></div>
-      <div class="pl"><div class="plb">Destino</div><h3>Paraíso Costero</h3><p>Punta del Este: playas, naturaleza y servicios premium para toda la familia.</p></div>
-      <div class="pl"><div class="plb">Experiencia</div><h3>21 Años de Trayectoria</h3><p>Sport Management Creations: historial impecable de seguridad y calidad.</p></div>
-    </div>
-  </div>
+<div class="inner">
+<div class="slbl a">Sobre el evento</div>
+<h2 class="stl a d1" style="color:var(--bl)">Más que Fútbol</h2>
+<div style="grid-column:1/-1;margin-bottom:1.5rem">
+<div class="abimg a d2" style="height:260px;border-radius:12px;overflow:hidden"><img src="fotos/DSC08540-383.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center 30%" alt="Equipos Copa Junior Internacional"></div>
+</div>
+<p class="sdsc a d2">La Copa Junior Internacional es una experiencia inolvidable para futbolistas, cuerpos técnicos y familiares. Además de medirse con grandes equipos, los participantes disfrutan de las impresionantes instalaciones de Solanas Punta del Este. Este evento combina nivel competitivo, naturaleza e intercambio cultural.</p>
+<div class="abg">
+<div class="pl a d3"><div class="plb">Competencia</div><h3>Élite Internacional</h3><p>Equipos de múltiples países compitiendo en formato profesional con Copa de Oro y Copa de Plata.</p></div>
+<div class="pl a d3"><div class="plb">Cultura</div><h3>Intercambio Global</h3><p>Jugadores de distintas nacionalidades compartiendo la pasión por el fútbol en un entorno único.</p></div>
+<div class="pl a d4"><div class="plb">Destino</div><h3>Paraíso Costero</h3><p>Punta del Este: playas, naturaleza y servicios premium para toda la familia.</p></div>
+<div class="pl a d4"><div class="plb">Experiencia</div><h3>21 Años de Trayectoria</h3><p>Sport Management Creations: historial impecable de seguridad y calidad organizativa.</p></div>
 </div>
 </div>
 </section>
@@ -347,11 +327,9 @@ body{font-family:'Open Sans',sans-serif;color:var(--gr);background:var(--bk);ove
 <div class="si">
 <div>
 <div class="a d4" style="height:180px;border-radius:12px;overflow:hidden"><img src="fotos/trofeos y pelota.jpg" style="width:100%;height:100%;object-fit:cover" alt="Torneo 2025"></div>
-<p class="cap dk">### Foto del torneo 2025 — trofeos y pelota ###</p>
 </div>
 <div>
 <div class="a d5" style="height:180px;border-radius:12px;overflow:hidden"><img src="fotos/fotoequipo.jpg" style="width:100%;height:100%;object-fit:cover" alt="Equipos celebrando"></div>
-<p class="cap dk">### Foto de equipos celebrando ###</p>
 </div>
 </div>
 </div>
@@ -394,8 +372,8 @@ body{font-family:'Open Sans',sans-serif;color:var(--gr);background:var(--bk);ove
 <h2 class="stl a d1" style="color:var(--bl)">Solanas Resort, Punta del Este</h2>
 <div class="simg">
 <div class="a d2" style="height:200px;border-radius:12px;overflow:hidden"><img src="fotos/Complejo.jpeg" style="width:100%;height:100%;object-fit:cover" alt="Complejo Solanas"></div>
-<div class="a d3" style="height:200px;border-radius:12px;overflow:hidden"><img src="fotos/crystal view.jpeg" style="width:100%;height:100%;object-fit:cover" alt="Crystal Beach"></div>
-<div class="ph a d4" style="height:200px">Canchas de fútbol — PENDIENTE</div>
+<div class="ph a d3" style="height:200px">Crystal Beach / pileta</div>
+<div class="a d4" style="height:200px;border-radius:12px;overflow:hidden"><img src="fotos/DSC09308-566.jpg" style="width:100%;height:100%;object-fit:cover" alt="Partido en cancha"></div>
 </div>
 <p class="sdsc a d2">Uno de los mejores destinos de Sudamérica. Combina naturaleza, playa y servicios de primer nivel. El ambiente ideal para disfrutar del deporte y compartir momentos inolvidables.</p>
 <div class="sg">
@@ -417,12 +395,12 @@ body{font-family:'Open Sans',sans-serif;color:var(--gr);background:var(--bk);ove
 <h2 class="stl a d1" style="color:var(--wh)">Espacios de Visibilidad</h2>
 <p class="vd a d2">Tu marca presente en cada momento clave del torneo. Desde la llegada hasta la premiación, en cada rincón del evento.</p>
 <div class="vg">
-<div class="vc a d2"><div class="ph dk vi" style="height:170px">Foto banners laterales en canchas</div><div class="vb"><h4>Banners en Canchas</h4><p>Cartelería lateral visible en cada partido durante los 4 días de torneo.</p></div></div>
+<div class="vc a d2"><div class="vi" style="height:170px;overflow:hidden"><img src="fotos/DSC07324-15.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center 20%" alt="Banners en canchas"></div><div class="vb"><h4>Banners en Canchas</h4><p>Cartelería lateral visible en cada partido durante los 4 días de torneo.</p></div></div>
 <div class="vc a d3"><div class="vi" style="height:170px;overflow:hidden"><img src="fotos/Arco de entrada.jpeg" style="width:100%;height:100%;object-fit:cover" alt="Arco de entrada"></div><div class="vb"><h4>Arco de Entrada</h4><p>Estructura de bienvenida con branding. Punto obligado de fotos.</p></div></div>
 <div class="vc a d4"><div class="vi" style="height:170px;overflow:hidden"><img src="fotos/trofeos.jpg" style="width:100%;height:100%;object-fit:cover" alt="Trofeos Copa Junior"></div><div class="vb"><h4>Trofeos y Premiación</h4><p>Logo en trofeos Copa de Oro y Plata. Presencia en la ceremonia.</p></div></div>
-<div class="vc a d2"><div class="vi" style="height:170px;overflow:hidden"><img src="fotos/festejo.jpg" style="width:100%;height:100%;object-fit:cover" alt="Festejo"></div><div class="vb"><h4>Indumentaria Staff y Árbitros</h4><p>Logo en remeras de staff, árbitros y voluntarios durante todo el evento.</p></div></div>
-<div class="vc a d3"><div class="vi" style="height:170px;overflow:hidden"><img src="fotos/Panel entrevista.jpeg" style="width:100%;height:100%;object-fit:cover" alt="Panel entrevista"></div><div class="vb"><h4>Transmisión en Vivo</h4><p>Logo en pantalla durante toda la transmisión por YouTube.</p></div></div>
-<div class="vc a d4"><div class="ph dk vi" style="height:170px">Redes sociales — PENDIENTE</div><div class="vb"><h4>Redes Sociales y Digital</h4><p>Presencia en posts, stories y reels de @copajuniorinter.</p></div></div>
+<div class="vc a d2"><div class="vi" style="height:170px;overflow:hidden"><img src="fotos/DSC07681-132.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center 15%" alt="Árbitro con jugadores"></div><div class="vb"><h4>Indumentaria Staff y Árbitros</h4><p>Logo en remeras de staff, árbitros y voluntarios durante todo el evento.</p></div></div>
+<div class="vc a d3"><div class="vi" style="height:170px;overflow:hidden"><img src="fotos/Panel entrevista.jpeg" style="width:100%;height:100%;object-fit:cover" alt="Panel de entrevista"></div><div class="vb"><h4>Transmisión en Vivo</h4><p>Logo en pantalla durante toda la transmisión por YouTube.</p></div></div>
+<div class="vc a d4"><div class="vi" style="height:170px;overflow:hidden"><img src="fotos/DSC09478-600.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center 30%" alt="Entrevista con sponsors"></div><div class="vb"><h4>Redes Sociales y Digital</h4><p>Presencia en posts, stories y reels de @copajuniorinter.</p></div></div>
 </div>
 </div>
 </section>
@@ -521,14 +499,26 @@ body{font-family:'Open Sans',sans-serif;color:var(--gr);background:var(--bk);ove
 <script>
 const o=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('v')})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.a').forEach(el=>o.observe(el));
-document.querySelectorAll('.slide:not(.s1)').forEach(slide=>{
-  const lg=document.createElement('div');
-  lg.className='slide-logo';
-  lg.innerHTML='<img src="logos/logo-color-CJI.svg" alt="Copa Junior Internacional">';
-  slide.appendChild(lg);
+
+const slides=document.querySelectorAll('.slide');
+const total=slides.length;
+slides.forEach((slide,i)=>{
+  // Contador
+  const num=document.createElement('div');
+  num.className='slide-num';
+  num.innerHTML=`<span class="cur">${i+1}</span><span class="sep"> / </span><span class="tot">${total}</span>`;
+  slide.appendChild(num);
+  // Logo (todas menos la primera)
+  if(i>0){
+    const lg=document.createElement('div');
+    lg.className='slide-logo';
+    lg.innerHTML='<img src="logos/logo-color-CJI.svg" alt="Copa Junior Internacional">';
+    slide.appendChild(lg);
+  }
 });
+
 function fitSlides(){
-  document.querySelectorAll('.slide').forEach(slide=>{
+  slides.forEach(slide=>{
     const inner=slide.querySelector('.inner');
     if(!inner) return;
     inner.style.zoom='';
