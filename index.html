@@ -6,1373 +6,539 @@
 <title>Copa Junior Internacional 2026 — Propuesta de Patrocinio</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root {
-  --copa-azul: #0A1F3F;
-  --copa-azul-mid: #1B4F72;
-  --copa-azul-cielo: #2D7DD2;
-  --copa-azul-light: #4A9BE8;
-  --copa-dorado: #C8952E;
-  --copa-dorado-light: #E8B84A;
-  --copa-verde: #1B7A3D;
-  --copa-verde-claro: #4CAF50;
-  --copa-blanco: #FFFFFF;
-  --copa-gris: #333333;
-  --copa-gris-light: #F5F5F5;
-  --copa-negro: #070E1A;
-}
+:root{--bl-dk:#1463aa;--bl:#3287c8;--bl-md:#1463aa;--bl-lt:#3287c8;--bl-pl:#7ab0d8;--gold:#ee8611;--gold-lt:#f5a84e;--verde:#519433;--magenta:#c31056;--wh:#FFFFFF;--gr:#333;--gr-lt:#F4F6F8;--gr-md:#778899;--bk:#091520}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-snap-type:y mandatory}
+body{font-family:'Open Sans',sans-serif;color:var(--gr);background:var(--bk);overflow-x:hidden}
+.slide::before,.slide::after{pointer-events:none}
+.slide{height:100vh;scroll-snap-align:start;position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;overflow:hidden;padding:4rem 2rem}
+.inner{max-width:1100px;width:100%;position:relative;z-index:2}
+.slbl{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.stl{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(2rem,5vw,3.2rem);text-transform:uppercase;letter-spacing:-.02em;line-height:1.05;margin-bottom:1.5rem}
+.sdsc{font-size:1.05rem;line-height:1.7;color:var(--gr);max-width:700px;margin-bottom:2.5rem}
+.fl{position:absolute;inset:0;opacity:.02;background-image:repeating-linear-gradient(0deg,transparent,transparent 49px,rgba(255,255,255,.5) 49px,rgba(255,255,255,.5) 50px),repeating-linear-gradient(90deg,transparent,transparent 49px,rgba(255,255,255,.5) 49px,rgba(255,255,255,.5) 50px);pointer-events:none}
+@keyframes fadeUp{from{opacity:0;transform:translateY(50px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes pulse{0%,100%{opacity:.3}50%{opacity:.7}}
+.a{opacity:0}.a.v{animation:fadeUp .85s cubic-bezier(.22,1,.36,1) forwards}
+.d1{animation-delay:.15s!important}.d2{animation-delay:.3s!important}.d3{animation-delay:.45s!important}.d4{animation-delay:.6s!important}.d5{animation-delay:.75s!important}.d6{animation-delay:.9s!important}
+.ph{background:linear-gradient(135deg,rgba(52,137,202,.08),rgba(90,179,195,.08));border:2px dashed rgba(52,137,202,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--bl);font-family:'Montserrat',sans-serif;font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;text-align:center;padding:1rem}
+.ph.dk{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12);color:rgba(255,255,255,.3)}
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* HERO */
+.s1{background:linear-gradient(160deg,#071e3d,#0f4282,#1e6db5)}.s1::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 90% 60% at 50% -5%,rgba(255,255,255,.13),transparent 55%),radial-gradient(ellipse 60% 50% at 100% 100%,rgba(8,32,64,.3),transparent 55%)}
+.s1::after{content:'';position:absolute;top:0;right:0;width:40%;height:100%;background:linear-gradient(135deg,transparent 45%,rgba(255,255,255,.03) 45%,rgba(255,255,255,.01) 55%,transparent 55%);pointer-events:none}
+.hc{position:relative;z-index:2;text-align:center;max-width:900px}
+.hb{display:inline-block;padding:8px 28px;border:1.5px solid rgba(255,255,255,.55);border-radius:40px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:2rem;animation:fadeIn 1s .2s both}
+.hlogo{margin-bottom:1.5rem;animation:fadeIn 1s .3s both}
+.hlogo svg{height:130px;width:auto}
+.hd{font-family:'Montserrat',sans-serif;font-weight:700;font-size:clamp(1rem,2.2vw,1.5rem);color:rgba(255,255,255,.92);margin-top:1.5rem;letter-spacing:.08em;animation:fadeUp 1s .6s both}
+.hl{font-size:.95rem;color:rgba(255,255,255,.4);margin-top:.8rem;letter-spacing:.12em;text-transform:uppercase;animation:fadeUp 1s .8s both}
+.hls{display:flex;align-items:center;justify-content:center;gap:2.5rem;margin-top:2.5rem;animation:fadeIn 1s 1s both}
+.hls span{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.75rem;color:rgba(255,255,255,.3);letter-spacing:.12em;text-transform:uppercase}
+.hls .dv{width:1px;height:28px;background:rgba(255,255,255,.1)}
+.sa{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;animation:fadeIn 1s 1.2s both}
+.sa span{font-family:'Montserrat',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.18)}
+.sarr{width:16px;height:16px;border-right:1.5px solid rgba(255,255,255,.18);border-bottom:1.5px solid rgba(255,255,255,.18);transform:rotate(45deg);animation:pulse 2s infinite}
 
-html {
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-}
+/* ABOUT */
+.s2{background:var(--wh)}
+.abimg{height:260px;grid-column:1/-1;margin-bottom:1.5rem}
+.abg{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+@media(max-width:768px){.abg{grid-template-columns:1fr}}
+.pl{padding:1.8rem;border-radius:12px;background:var(--gr-lt);border-left:4px solid var(--bl);transition:transform .3s,box-shadow .3s}
+.pl:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(52,137,202,.08)}
+.pl .plb{font-family:'Montserrat',sans-serif;font-weight:800;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--bl-lt);margin-bottom:.4rem}
+.pl h3{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;color:var(--bl-dk);margin-bottom:.4rem;text-transform:uppercase}
+.pl p{font-size:.88rem;line-height:1.5;color:rgba(51,51,51,.6)}
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  color: var(--copa-gris);
-  background: var(--copa-negro);
-  overflow-x: hidden;
-}
+/* STATS */
+.s3{background:var(--bl-dk);position:relative}.s3::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 0% 0%,rgba(90,179,195,.15),transparent 60%),radial-gradient(ellipse 40% 40% at 100% 100%,rgba(234,165,74,.08),transparent 50%)}
+.sr{display:flex;gap:1.5rem;margin-top:2rem;flex-wrap:wrap}
+.sc{flex:1;min-width:150px;padding:1.8rem 1rem;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);text-align:center;transition:transform .3s,border-color .3s}
+.sc:hover{transform:scale(1.04);border-color:var(--gold)}
+.sn{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(2rem,4vw,3rem);background:linear-gradient(135deg,var(--gold),var(--gold-lt));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+.sl{font-family:'Montserrat',sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.42);margin-top:.5rem}
+.ss{font-size:.68rem;color:rgba(255,255,255,.22);margin-top:.2rem}
+.si{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem}
+@media(max-width:600px){.si{grid-template-columns:1fr}}
 
-/* ─── SLIDE BASE ─── */
-.slide {
-  min-height: 100vh;
-  scroll-snap-align: start;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
+/* PROGRAMA */
+.s4{background:var(--wh)}
+.prgl{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-top:2rem}
+@media(max-width:768px){.prgl{grid-template-columns:1fr}}
+.primg{border-radius:16px;overflow:hidden;min-height:380px}
+.tl{position:relative}.tl::before{content:'';position:absolute;left:24px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--bl-lt),var(--gold));border-radius:2px}
+.ti{display:flex;gap:1.5rem;padding:1.1rem 0;position:relative}
+.td{width:48px;min-width:48px;height:48px;border-radius:50%;background:var(--bl);display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:.63rem;color:var(--wh);z-index:2;border:3px solid var(--wh);box-shadow:0 3px 12px rgba(52,137,202,.18)}
+.tc .dy{font-family:'Montserrat',sans-serif;font-weight:600;font-size:.68rem;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.2rem}
+.tc h3{font-family:'Montserrat',sans-serif;font-weight:700;font-size:1.05rem;color:var(--bl-dk);margin-bottom:.2rem}
+.tc p{font-size:.85rem;color:rgba(51,51,51,.5);line-height:1.35}
 
-/* ─── ANIMATIONS ─── */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(60px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-@keyframes scaleIn {
-  from { opacity: 0; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1); }
-}
-@keyframes slideRight {
-  from { opacity: 0; transform: translateX(-80px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-@keyframes slideLeft {
-  from { opacity: 0; transform: translateX(80px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-@keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
-}
-@keyframes pulse {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.8; }
-}
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
-}
-@keyframes countUp {
-  from { opacity: 0; transform: translateY(30px) scale(0.9); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
-}
+/* CATEGORIAS */
+.s5{background:linear-gradient(135deg,var(--bl-dk),#0D2B4F);position:relative}
+.cc{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem}
+@media(max-width:768px){.cc{grid-template-columns:1fr}}
+.cb{padding:2rem;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07)}
+.cb h3{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.1rem;color:var(--wh);text-transform:uppercase;margin-bottom:1.2rem}
+.cr{display:flex;justify-content:space-between;align-items:center;padding:.6rem 1rem;border-radius:8px;margin-bottom:.4rem;background:rgba(255,255,255,.03);border-left:3px solid var(--bl-lt)}
+.cr .y{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;color:var(--wh)}
+.cr .f{font-family:'Montserrat',sans-serif;font-weight:600;font-size:.72rem;color:var(--gold);letter-spacing:.04em}
+.fb{margin-top:2rem;padding:1.5rem;border-radius:12px;background:rgba(234,165,74,.06);border:1px solid rgba(234,165,74,.15);text-align:center}
+.fb h4{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1rem;color:var(--gold);margin-bottom:.4rem}
+.fb p{font-size:.83rem;color:rgba(255,255,255,.45);margin-bottom:.7rem}
+.ft{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
+.ftg{padding:.45rem 1.1rem;border-radius:8px;background:rgba(255,255,255,.05);font-family:'Montserrat',sans-serif;font-weight:700;font-size:.72rem;color:var(--wh)}
 
-.animate {
-  opacity: 0;
-}
-.animate.visible {
-  animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-.animate-delay-1 { animation-delay: 0.15s !important; }
-.animate-delay-2 { animation-delay: 0.3s !important; }
-.animate-delay-3 { animation-delay: 0.45s !important; }
-.animate-delay-4 { animation-delay: 0.6s !important; }
-.animate-delay-5 { animation-delay: 0.75s !important; }
-.animate-delay-6 { animation-delay: 0.9s !important; }
+/* SOLANAS */
+.s6{background:var(--wh)}
+.simg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;margin-bottom:2rem}
+@media(max-width:768px){.simg{grid-template-columns:1fr}}
+.simg .ph{height:200px}
+.sg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem}
+@media(max-width:768px){.sg{grid-template-columns:1fr 1fr}}
+.sf{text-align:center;padding:1.6rem 1rem;border-radius:14px;background:var(--gr-lt);transition:transform .3s}
+.sf:hover{transform:translateY(-3px)}
+.sf .ic{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--bl),var(--bl-md));margin:0 auto .7rem}
+.sf h4{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.8rem;color:var(--bl-dk);text-transform:uppercase;margin-bottom:.25rem}
+.sf p{font-size:.78rem;color:rgba(51,51,51,.5)}
 
-/* ─── GEOMETRIC DECORATORS ─── */
-.geo-circle {
-  position: absolute;
-  border-radius: 50%;
-  border: 2px solid rgba(200, 149, 46, 0.15);
-  pointer-events: none;
-}
-.geo-line {
-  position: absolute;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(45, 125, 210, 0.3), transparent);
-  pointer-events: none;
-}
+/* VISIBILIDAD */
+.s7{background:linear-gradient(170deg,var(--bk),var(--bl-dk));position:relative}
+.vd{font-size:1rem;color:rgba(255,255,255,.45);max-width:650px;line-height:1.6;margin-bottom:2.5rem}
+.vg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem}
+@media(max-width:900px){.vg{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.vg{grid-template-columns:1fr}}
+.vc{border-radius:14px;overflow:hidden;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);transition:border-color .3s,transform .3s}
+.vc:hover{border-color:var(--gold);transform:translateY(-4px)}
+.vc .vi{height:170px}
+.vc .vb{padding:1.1rem 1.4rem}
+.vc h4{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.85rem;color:var(--wh);margin-bottom:.25rem;text-transform:uppercase}
+.vc p{font-size:.8rem;color:rgba(255,255,255,.38);line-height:1.35}
 
-/* ═══════════════════════════════════════════
-   SLIDE 1 — PORTADA HERO
-   ═══════════════════════════════════════════ */
-.slide-hero {
-  background: var(--copa-negro);
-  position: relative;
-}
-.slide-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: 
-    radial-gradient(ellipse 120% 80% at 50% 0%, rgba(10,31,63,0.95) 0%, transparent 70%),
-    radial-gradient(ellipse 80% 60% at 80% 100%, rgba(27,79,114,0.4) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 40% at 10% 80%, rgba(45,125,210,0.15) 0%, transparent 50%);
-}
-/* Diagonal gold accent */
-.slide-hero::after {
-  content: '';
-  position: absolute;
-  top: 0; right: 0;
-  width: 40%;
-  height: 100%;
-  background: linear-gradient(135deg, transparent 45%, rgba(200,149,46,0.06) 45%, rgba(200,149,46,0.03) 55%, transparent 55%);
-  pointer-events: none;
-}
-.hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  padding: 2rem;
-  max-width: 900px;
-}
-.hero-badge {
-  display: inline-block;
-  padding: 8px 28px;
-  border: 1.5px solid var(--copa-dorado);
-  border-radius: 40px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 0.75rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--copa-dorado);
-  margin-bottom: 2rem;
-  animation: fadeIn 1s 0.2s both;
-}
-.hero-title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  font-size: clamp(2.8rem, 7vw, 5.5rem);
-  line-height: 0.95;
-  color: var(--copa-blanco);
-  text-transform: uppercase;
-  letter-spacing: -0.03em;
-  margin-bottom: 0.3em;
-  animation: fadeUp 1s 0.4s both;
-}
-.hero-title span {
-  display: block;
-  background: linear-gradient(135deg, var(--copa-dorado) 0%, var(--copa-dorado-light) 50%, var(--copa-dorado) 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: shimmer 4s linear infinite;
-  font-size: 0.45em;
-  letter-spacing: 0.35em;
-  margin-top: 0.5em;
-}
-.hero-date {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
-  color: var(--copa-azul-light);
-  margin-top: 1.5rem;
-  letter-spacing: 0.08em;
-  animation: fadeUp 1s 0.7s both;
-}
-.hero-location {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  color: rgba(255,255,255,0.5);
-  margin-top: 0.8rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  animation: fadeUp 1s 0.9s both;
-}
-.hero-logos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  margin-top: 3rem;
-  animation: fadeIn 1s 1.2s both;
-}
-.hero-logos .logo-text {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.4);
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-.hero-logos .logo-divider {
-  width: 1px;
-  height: 30px;
-  background: rgba(255,255,255,0.15);
-}
-.hero-scroll-hint {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  animation: fadeIn 1s 1.5s both;
-}
-.hero-scroll-hint span {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.25);
-}
-.scroll-arrow {
-  width: 20px;
-  height: 20px;
-  border-right: 1.5px solid rgba(255,255,255,0.25);
-  border-bottom: 1.5px solid rgba(255,255,255,0.25);
-  transform: rotate(45deg);
-  animation: pulse 2s infinite;
-}
+/* OPORTUNIDAD */
+.s8{background:var(--wh)}
+.bg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem}
+@media(max-width:900px){.bg{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.bg{grid-template-columns:1fr}}
+.bn{padding:1.7rem;border-radius:14px;background:var(--gr-lt);border-top:3px solid var(--bl);transition:transform .3s,box-shadow .3s}
+.bn:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(52,137,202,.08)}
+.bn .bl2{font-family:'Montserrat',sans-serif;font-weight:800;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--bl-lt);margin-bottom:.4rem}
+.bn h4{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.88rem;color:var(--bl-dk);margin-bottom:.35rem;text-transform:uppercase}
+.bn p{font-size:.83rem;color:rgba(51,51,51,.55);line-height:1.4}
 
-/* Field pattern background */
-.field-pattern {
-  position: absolute;
-  inset: 0;
-  opacity: 0.03;
-  background-image: 
-    repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(255,255,255,0.5) 49px, rgba(255,255,255,0.5) 50px),
-    repeating-linear-gradient(90deg, transparent, transparent 49px, rgba(255,255,255,0.5) 49px, rgba(255,255,255,0.5) 50px);
-  pointer-events: none;
-}
+/* PAQUETES */
+.s9{background:var(--bl-dk);position:relative}.s9::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(42,122,184,.12),transparent 60%)}
+.ts{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;margin-top:2.5rem;text-align:left}
+@media(max-width:900px){.ts{grid-template-columns:1fr}}
+.tr{border-radius:16px;overflow:hidden;transition:transform .3s,box-shadow .3s;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+.tr:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.2)}
+.th{padding:1.4rem 1.4rem .8rem;text-align:center}
+.tn{font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.15rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.15rem}
+.tsb{font-size:.72rem;opacity:.6}
+.tb{padding:.8rem 1.4rem 1.4rem}
+.tb ul{list-style:none}.tb li{padding:.4rem 0;font-size:.83rem;display:flex;align-items:flex-start;gap:.5rem;line-height:1.3;color:rgba(255,255,255,.6)}
+.tb li::before{content:'—';font-weight:700;flex-shrink:0}
+.to{border-color:var(--gold)}.to .th{background:linear-gradient(135deg,var(--gold),var(--gold-lt),var(--gold));color:var(--bl-dk)}.to .tb li::before{color:var(--gold)}
+.to .ft2{position:absolute;top:0;right:14px;background:var(--bl-dk);color:var(--gold);font-family:'Montserrat',sans-serif;font-weight:700;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:0 0 6px 6px}
+.tp{border-color:rgba(139,168,200,.3)}.tp .th{background:linear-gradient(135deg,#6B8CAE,#8BA8C8,#A8C4DC);color:var(--wh)}.tp .tb li::before{color:#8BA8C8}
+.tbr{border-color:rgba(184,125,91,.3)}.tbr .th{background:linear-gradient(135deg,#8B6542,#B87D5B,#CD9B6E);color:var(--wh)}.tbr .tb li::before{color:#B87D5B}
 
-/* ═══════════════════════════════════════════
-   SLIDE 2 — MÁS QUE FÚTBOL
-   ═══════════════════════════════════════════ */
-.slide-about {
-  background: var(--copa-blanco);
-  padding: 5rem 2rem;
-}
-.slide-about .inner {
-  max-width: 1100px;
-  width: 100%;
-}
-.section-label {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 0.7rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--copa-dorado);
-  margin-bottom: 1rem;
-}
-.section-title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  color: var(--copa-azul);
-  text-transform: uppercase;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  margin-bottom: 1.5rem;
-}
-.section-desc {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: var(--copa-gris);
-  max-width: 700px;
-  margin-bottom: 3rem;
-}
-.pillars {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-}
-.pillar {
-  padding: 2rem;
-  border-radius: 12px;
-  background: var(--copa-gris-light);
-  border-bottom: 3px solid var(--copa-dorado);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.pillar:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 48px rgba(10,31,63,0.1);
-}
-.pillar-icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.pillar h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  color: var(--copa-azul);
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-}
-.pillar p {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: rgba(51,51,51,0.7);
-}
+/* EMPRESAS */
+.s10{background:var(--wh)}
+.ed{font-size:1rem;color:rgba(51,51,51,.55);max-width:600px;line-height:1.6;margin-bottom:2.5rem}
+.lr{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem}
+@media(max-width:768px){.lr{grid-template-columns:1fr 1fr}}
+.lc{padding:1.8rem 1.4rem;border-radius:14px;background:var(--gr-lt);border:1px solid rgba(52,137,202,.05);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;min-height:120px;transition:transform .3s,border-color .3s}
+.lc:hover{transform:scale(1.03);border-color:var(--bl)}
+.lc .ln{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.88rem;color:var(--bl-dk);text-align:center}
+.lc .lrl{font-size:.65rem;color:var(--gr-md);text-transform:uppercase;letter-spacing:.1em}
+.lc.c1{border-bottom:3px solid #eaa54a}.lc.c2{border-bottom:3px solid var(--bl-lt)}.lc.c3{border-bottom:3px solid #8B0000}.lc.c4{border-bottom:3px solid #00A3A3}.lc.c5{border-bottom:3px solid #26A69A}.lc.c6{border-bottom:3px solid #5C6BC0}
 
-/* ═══════════════════════════════════════════
-   SLIDE 3 — NÚMEROS 2025
-   ═══════════════════════════════════════════ */
-.slide-stats {
-  background: var(--copa-azul);
-  position: relative;
-  padding: 5rem 2rem;
-}
-.slide-stats::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 60% 50% at 0% 0%, rgba(45,125,210,0.2) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 40% at 100% 100%, rgba(200,149,46,0.1) 0%, transparent 50%);
-}
-.slide-stats .field-pattern { opacity: 0.015; }
-.slide-stats .inner {
-  position: relative;
-  z-index: 2;
-  max-width: 1100px;
-  width: 100%;
-  text-align: center;
-}
-.slide-stats .section-label { color: var(--copa-dorado-light); }
-.slide-stats .section-title { color: var(--copa-blanco); }
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-.stat-card {
-  padding: 2rem 1rem;
-  border-radius: 16px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
-  backdrop-filter: blur(10px);
-  transition: transform 0.3s, border-color 0.3s;
-}
-.stat-card:hover {
-  transform: scale(1.05);
-  border-color: var(--copa-dorado);
-}
-.stat-number {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  background: linear-gradient(135deg, var(--copa-dorado) 0%, var(--copa-dorado-light) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1;
-}
-.stat-label {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
-  margin-top: 0.75rem;
-}
-.stat-sublabel {
-  font-size: 0.75rem;
-  color: rgba(255,255,255,0.3);
-  margin-top: 0.3rem;
-}
+/* CONTACTO */
+.s11{background:linear-gradient(160deg,#071e3d,#0f4282,#1e6db5);position:relative}.s11::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 90% 60% at 50% -5%,rgba(255,255,255,.1),transparent 55%),radial-gradient(ellipse 60% 50% at 100% 100%,rgba(8,32,64,.25),transparent 50%)}
+.s11 .inner{text-align:center}
+.ctt{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.7rem,4vw,2.6rem);color:var(--wh);text-transform:uppercase;line-height:1.1;margin-bottom:1rem}
+.cts{font-size:.95rem;color:rgba(255,255,255,.4);margin-bottom:2.5rem;max-width:550px;margin-left:auto;margin-right:auto}
+.ccs{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2.5rem;max-width:600px;margin-left:auto;margin-right:auto}
+@media(max-width:600px){.ccs{grid-template-columns:1fr}}
+.ccrd{padding:1.7rem;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);transition:border-color .3s}.ccrd:hover{border-color:var(--gold)}
+.ccrd .nm{font-family:'Montserrat',sans-serif;font-weight:700;font-size:1rem;color:var(--wh);margin-bottom:.5rem}
+.ccrd .em{font-size:.85rem;color:var(--bl-lt);margin-bottom:.2rem}
+.ccrd .ph2{font-size:.85rem;color:rgba(255,255,255,.4)}
+.cls{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-bottom:2rem}
+.cl{font-family:'Montserrat',sans-serif;font-weight:600;font-size:.85rem;color:var(--bl-lt);text-decoration:none;transition:color .3s}.cl:hover{color:var(--gold)}
+.cbtn{display:inline-block;padding:14px 44px;border:none;border-radius:8px;background:linear-gradient(135deg,var(--gold),var(--gold-lt));font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;color:var(--bl-dk);cursor:pointer;transition:transform .3s,box-shadow .3s}
+.cbtn:hover{transform:translateY(-3px);box-shadow:0 10px 35px rgba(234,165,74,.25)}
+.cftr{margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.04);font-size:.68rem;color:rgba(255,255,255,.15);letter-spacing:.08em}
+.cap{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;margin-top:.45rem;padding:3px 10px;display:inline-block;border-radius:4px;background:rgba(52,137,202,.08);color:var(--bl-lt);border:1px solid rgba(52,137,202,.18)}
+.cap.dk{background:rgba(255,255,255,.05);color:rgba(255,255,255,.35);border-color:rgba(255,255,255,.1)}
+.slide-logo{position:absolute;bottom:1.1rem;left:50%;transform:translateX(-50%);z-index:10;pointer-events:none;text-align:center}
+.slide-logo img{height:52px;width:auto;display:block;opacity:.6}
 
-/* ═══════════════════════════════════════════
-   SLIDE 4 — PROGRAMA
-   ═══════════════════════════════════════════ */
-.slide-programa {
-  background: var(--copa-blanco);
-  padding: 5rem 2rem;
-}
-.slide-programa .inner {
-  max-width: 1000px;
-  width: 100%;
-}
-.timeline {
-  position: relative;
-  margin-top: 3rem;
-}
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 28px;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: linear-gradient(180deg, var(--copa-azul-cielo), var(--copa-dorado));
-  border-radius: 2px;
-}
-.timeline-item {
-  display: flex;
-  gap: 2rem;
-  padding: 1.5rem 0;
-  position: relative;
-}
-.timeline-dot {
-  width: 58px;
-  min-width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  background: var(--copa-azul);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  font-size: 0.75rem;
-  color: var(--copa-blanco);
-  z-index: 2;
-  border: 3px solid var(--copa-blanco);
-  box-shadow: 0 4px 16px rgba(10,31,63,0.2);
-}
-.timeline-content h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: var(--copa-azul);
-  margin-bottom: 0.25rem;
-}
-.timeline-content .day-name {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 0.75rem;
-  color: var(--copa-dorado);
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  margin-bottom: 0.3rem;
-}
-.timeline-content p {
-  font-size: 0.95rem;
-  color: rgba(51,51,51,0.65);
-  line-height: 1.5;
-}
+/* SLIDE 2 GRID */
+.s2g{display:grid;grid-template-columns:1fr 1.5fr;gap:2.5rem;align-items:center}
+.s2img{border-radius:16px;overflow:hidden;height:72vh}
 
-/* ═══════════════════════════════════════════
-   SLIDE 5 — CATEGORÍAS
-   ═══════════════════════════════════════════ */
-.slide-categorias {
-  background: linear-gradient(135deg, var(--copa-azul) 0%, #0D2B4F 100%);
-  padding: 5rem 2rem;
-  position: relative;
-}
-.slide-categorias .inner {
-  position: relative;
-  z-index: 2;
-  max-width: 1100px;
-  width: 100%;
-}
-.slide-categorias .section-label { color: var(--copa-dorado-light); }
-.slide-categorias .section-title { color: var(--copa-blanco); }
-.cat-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-@media (max-width: 768px) {
-  .cat-grid { grid-template-columns: 1fr; }
-}
-.cat-box {
-  padding: 2rem;
-  border-radius: 16px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-}
-.cat-box h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  font-size: 1.3rem;
-  color: var(--copa-blanco);
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-.cat-box h3 .cat-icon {
-  font-size: 1.5rem;
-}
-.cat-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.7rem 1rem;
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
-  background: rgba(255,255,255,0.04);
-  border-left: 3px solid var(--copa-azul-cielo);
-}
-.cat-row .years {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  color: var(--copa-blanco);
-}
-.cat-row .format {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 0.8rem;
-  color: var(--copa-dorado);
-  letter-spacing: 0.05em;
-}
-.format-info {
-  margin-top: 2rem;
-  padding: 1.5rem;
-  border-radius: 12px;
-  background: linear-gradient(135deg, rgba(200,149,46,0.1) 0%, rgba(200,149,46,0.02) 100%);
-  border: 1px solid rgba(200,149,46,0.2);
-  text-align: center;
-}
-.format-info h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  font-size: 1.1rem;
-  color: var(--copa-dorado);
-  margin-bottom: 0.5rem;
-}
-.format-info p {
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.6);
-}
-.format-badges {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-}
-.format-badge {
-  padding: 0.5rem 1.2rem;
-  border-radius: 8px;
-  background: rgba(255,255,255,0.06);
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 0.8rem;
-  color: var(--copa-blanco);
-  letter-spacing: 0.05em;
-}
-
-/* ═══════════════════════════════════════════
-   SLIDE 6 — SOLANAS
-   ═══════════════════════════════════════════ */
-.slide-solanas {
-  background: var(--copa-blanco);
-  padding: 5rem 2rem;
-}
-.slide-solanas .inner {
-  max-width: 1100px;
-  width: 100%;
-}
-.solanas-features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2.5rem;
-}
-.solanas-feat {
-  text-align: center;
-  padding: 2rem 1.5rem;
-  border-radius: 16px;
-  background: var(--copa-gris-light);
-  transition: transform 0.3s;
-}
-.solanas-feat:hover { transform: translateY(-4px); }
-.solanas-feat .feat-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--copa-azul) 0%, var(--copa-azul-mid) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1rem;
-  font-size: 1.5rem;
-}
-.solanas-feat h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: var(--copa-azul);
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  margin-bottom: 0.4rem;
-}
-.solanas-feat p {
-  font-size: 0.85rem;
-  color: rgba(51,51,51,0.6);
-  line-height: 1.4;
-}
-
-/* ═══════════════════════════════════════════
-   SLIDE 7 — OPORTUNIDAD
-   ═══════════════════════════════════════════ */
-.slide-oportunidad {
-  background: linear-gradient(170deg, var(--copa-negro) 0%, var(--copa-azul) 100%);
-  padding: 5rem 2rem;
-  position: relative;
-}
-.slide-oportunidad .inner {
-  position: relative;
-  z-index: 2;
-  max-width: 1100px;
-  width: 100%;
-}
-.slide-oportunidad .section-label { color: var(--copa-dorado-light); }
-.slide-oportunidad .section-title { color: var(--copa-blanco); margin-bottom: 1rem; }
-.oportunidad-desc {
-  font-size: 1.1rem;
-  color: rgba(255,255,255,0.6);
-  max-width: 650px;
-  line-height: 1.7;
-  margin-bottom: 3rem;
-}
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-.benefit {
-  padding: 2rem;
-  border-radius: 16px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.06);
-  transition: border-color 0.3s, transform 0.3s;
-}
-.benefit:hover {
-  border-color: var(--copa-dorado);
-  transform: translateY(-4px);
-}
-.benefit-icon {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-.benefit h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  color: var(--copa-blanco);
-  margin-bottom: 0.5rem;
-}
-.benefit p {
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.45);
-  line-height: 1.5;
-}
-
-/* ═══════════════════════════════════════════
-   SLIDE 8 — PAQUETES
-   ═══════════════════════════════════════════ */
-.slide-paquetes {
-  background: var(--copa-blanco);
-  padding: 5rem 2rem;
-}
-.slide-paquetes .inner {
-  max-width: 1100px;
-  width: 100%;
-  text-align: center;
-}
-.tiers {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-.tier {
-  border-radius: 20px;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
-  position: relative;
-}
-.tier:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 24px 64px rgba(10,31,63,0.15);
-}
-.tier-header {
-  padding: 2rem 1.5rem 1.5rem;
-  text-align: center;
-}
-.tier-name {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 0.3rem;
-}
-.tier-sub {
-  font-size: 0.8rem;
-  opacity: 0.7;
-}
-.tier-body {
-  padding: 1.5rem 2rem 2rem;
-  text-align: left;
-}
-.tier-body ul {
-  list-style: none;
-}
-.tier-body li {
-  padding: 0.5rem 0;
-  font-size: 0.9rem;
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6rem;
-  line-height: 1.4;
-}
-.tier-body li::before {
-  content: '✓';
-  font-weight: 700;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-
-/* Oro */
-.tier-oro {
-  background: var(--copa-gris-light);
-  border: 2px solid var(--copa-dorado);
-}
-.tier-oro .tier-header {
-  background: linear-gradient(135deg, var(--copa-dorado) 0%, var(--copa-dorado-light) 50%, var(--copa-dorado) 100%);
-  color: var(--copa-azul);
-}
-.tier-oro .tier-body li::before { color: var(--copa-dorado); }
-.tier-oro .featured-tag {
-  position: absolute;
-  top: -1px; right: 20px;
-  background: var(--copa-azul);
-  color: var(--copa-dorado);
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 0.65rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  padding: 6px 14px;
-  border-radius: 0 0 8px 8px;
-}
-
-/* Plata */
-.tier-plata {
-  background: var(--copa-gris-light);
-  border: 2px solid #8BA8C8;
-}
-.tier-plata .tier-header {
-  background: linear-gradient(135deg, #6B8CAE 0%, #8BA8C8 50%, #A8C4DC 100%);
-  color: var(--copa-blanco);
-}
-.tier-plata .tier-body li::before { color: #6B8CAE; }
-
-/* Bronce */
-.tier-bronce {
-  background: var(--copa-gris-light);
-  border: 2px solid #B87D5B;
-}
-.tier-bronce .tier-header {
-  background: linear-gradient(135deg, #8B6542 0%, #B87D5B 50%, #CD9B6E 100%);
-  color: var(--copa-blanco);
-}
-.tier-bronce .tier-body li::before { color: #B87D5B; }
-
-/* ═══════════════════════════════════════════
-   SLIDE 9 — EMPRESAS 2025
-   ═══════════════════════════════════════════ */
-.slide-empresas {
-  background: linear-gradient(135deg, var(--copa-azul) 0%, var(--copa-azul-mid) 100%);
-  padding: 5rem 2rem;
-  position: relative;
-}
-.slide-empresas .inner {
-  position: relative;
-  z-index: 2;
-  max-width: 1000px;
-  width: 100%;
-  text-align: center;
-}
-.slide-empresas .section-label { color: var(--copa-dorado-light); }
-.slide-empresas .section-title { color: var(--copa-blanco); }
-.empresas-desc {
-  font-size: 1rem;
-  color: rgba(255,255,255,0.5);
-  max-width: 600px;
-  margin: 0 auto 3rem;
-  line-height: 1.6;
-}
-.logos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5rem;
-}
-.logo-card {
-  padding: 2rem 1.5rem;
-  border-radius: 16px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.08);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  transition: transform 0.3s, border-color 0.3s;
-  min-height: 120px;
-}
-.logo-card:hover {
-  transform: scale(1.05);
-  border-color: var(--copa-dorado);
-}
-.logo-card .logo-name {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 0.95rem;
-  color: var(--copa-blanco);
-  text-align: center;
-}
-.logo-card .logo-role {
-  font-size: 0.7rem;
-  color: rgba(255,255,255,0.35);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-/* ═══════════════════════════════════════════
-   SLIDE 10 — CONTACTO
-   ═══════════════════════════════════════════ */
-.slide-contacto {
-  background: var(--copa-negro);
-  padding: 5rem 2rem;
-  position: relative;
-}
-.slide-contacto::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 50% 50% at 50% 50%, rgba(10,31,63,0.6) 0%, transparent 70%),
-    radial-gradient(ellipse 30% 30% at 20% 80%, rgba(200,149,46,0.08) 0%, transparent 50%);
-}
-.slide-contacto .inner {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  width: 100%;
-  text-align: center;
-}
-.contacto-title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  color: var(--copa-blanco);
-  text-transform: uppercase;
-  line-height: 1.1;
-  margin-bottom: 1rem;
-}
-.contacto-sub {
-  font-size: 1.1rem;
-  color: rgba(255,255,255,0.5);
-  margin-bottom: 3rem;
-}
-.contact-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  margin-bottom: 3rem;
-}
-@media (max-width: 600px) {
-  .contact-cards { grid-template-columns: 1fr; }
-}
-.contact-card {
-  padding: 2rem;
-  border-radius: 16px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  transition: border-color 0.3s;
-}
-.contact-card:hover { border-color: var(--copa-dorado); }
-.contact-card .name {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--copa-blanco);
-  margin-bottom: 0.75rem;
-}
-.contact-card .email {
-  font-size: 0.9rem;
-  color: var(--copa-azul-light);
-  margin-bottom: 0.3rem;
-}
-.contact-card .phone {
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.5);
-}
-.contacto-links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-.contacto-link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: var(--copa-azul-light);
-  text-decoration: none;
-  transition: color 0.3s;
-}
-.contacto-link:hover { color: var(--copa-dorado); }
-.contacto-cta {
-  margin-top: 3rem;
-  padding: 16px 48px;
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(135deg, var(--copa-dorado) 0%, var(--copa-dorado-light) 100%);
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--copa-azul);
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.contacto-cta:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(200,149,46,0.3);
-}
-.contacto-footer {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255,255,255,0.06);
-  font-size: 0.75rem;
-  color: rgba(255,255,255,0.2);
-  letter-spacing: 0.1em;
+/* ===== RESPONSIVE ===== */
+@media(max-width:1024px){
+  .slide{padding:3rem 1.5rem}
+  .stl{font-size:clamp(1.6rem,4vw,2.6rem)}
+  .vg{grid-template-columns:1fr 1fr}
+  .ts{grid-template-columns:1fr 1fr}
+  .bg{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .slide{padding:2.2rem 1.1rem}
+  .stl{margin-bottom:.8rem}
+  .sdsc{margin-bottom:1.2rem;font-size:.92rem;line-height:1.6}
+  .slbl{margin-bottom:.6rem}
+  /* Hero */
+  .hb{padding:6px 16px;font-size:.62rem;margin-bottom:1rem}
+  .hd{font-size:clamp(.85rem,3vw,1.1rem)}
+  .hl{font-size:.78rem;margin-top:.5rem}
+  .hls{gap:1.2rem;margin-top:1.5rem}
+  .hls svg[width="120"]{width:80px!important}
+  .hls svg[width="90"]{width:65px!important}
+  .sa{bottom:.8rem}
+  /* Slide 2 */
+  .s2g{grid-template-columns:1fr;gap:1.2rem}
+  .s2img{height:30vh}
+  .abg{gap:1rem}
+  .pl{padding:1.2rem}
+  .pl h3{font-size:.85rem}
+  .pl p{font-size:.8rem}
+  /* Slide 3 */
+  .sr{gap:.8rem;margin-top:1rem}
+  .sc{padding:1.1rem .7rem;min-width:calc(33% - .6rem)}
+  .si{margin-top:1.2rem;gap:1rem}
+  /* Slide 4 */
+  .primg{min-height:220px}
+  .ti{gap:.9rem;padding:.7rem 0}
+  .td{width:36px;min-width:36px;height:36px;font-size:.55rem}
+  .tc h3{font-size:.9rem}
+  .tc p{font-size:.78rem}
+  /* Slide 5 */
+  .cb{padding:1.3rem}
+  .cr{padding:.5rem .8rem}
+  .fb{margin-top:1.2rem;padding:1rem}
+  /* Slide 6 */
+  .simg{gap:1rem;margin-bottom:1.2rem}
+  .sg{gap:.9rem}
+  .sf{padding:1.1rem .7rem}
+  .sf .ic{width:36px;height:36px}
+  /* Slide 7 */
+  .vd{font-size:.88rem;margin-bottom:1.2rem}
+  .vc .vi{height:130px}
+  .vc .vb{padding:.8rem 1rem}
+  .vc h4{font-size:.78rem}
+  .vc p{font-size:.74rem}
+  /* Slide 8 */
+  .bn{padding:1.2rem}
+  .bn h4{font-size:.82rem}
+  .bn p{font-size:.78rem}
+  /* Slide 9 */
+  .ts{grid-template-columns:1fr;margin-top:1.2rem;gap:1rem}
+  .th{padding:1rem 1rem .6rem}
+  .tb{padding:.5rem 1rem 1rem}
+  .tb li{font-size:.78rem;padding:.3rem 0}
+  /* Slide 10 */
+  .ed{margin-bottom:1.2rem;font-size:.88rem}
+  .lc{min-height:90px;padding:1.1rem .9rem}
+  /* Slide 11 */
+  .ctt{font-size:clamp(1.4rem,5vw,2rem)}
+  .cts{margin-bottom:1.5rem;font-size:.85rem}
+  .ccs{margin-bottom:1.5rem;gap:1rem}
+  .ccrd{padding:1.2rem}
+  .cbtn{padding:11px 28px;font-size:.82rem}
+  .cls{margin-bottom:1rem;gap:1.2rem}
+  .slide-logo img{height:38px}
+}
+@media(max-width:480px){
+  .slide{padding:1.8rem .9rem}
+  .sc{min-width:calc(50% - .4rem)}
+  .simg{grid-template-columns:1fr 1fr!important}
+  .sg{grid-template-columns:1fr 1fr!important}
+  .vg{grid-template-columns:1fr 1fr!important}
+  .bg{grid-template-columns:1fr 1fr!important}
+  .lr{grid-template-columns:1fr 1fr!important}
+  .ts{grid-template-columns:1fr!important}
+  .slide-logo img{height:30px}
+}
+@media(max-width:360px){
+  .sc{min-width:100%}
+  .simg,.sg,.vg,.bg,.lr{grid-template-columns:1fr!important}
+}
+/* Landscape mobile */
+@media(max-height:500px) and (orientation:landscape){
+  .slide{padding:1.5rem 1.5rem}
+  .hlogo img{height:min(140px,30vh)!important}
+  .hb{margin-bottom:.6rem}
+  .hd,.hl{margin-top:.4rem}
+  .hls{margin-top:1rem}
+  .slide-logo img{height:28px}
 }
 </style>
 </head>
 <body>
 
-<!-- ═══ SLIDE 1 — PORTADA ═══ -->
-<section class="slide slide-hero">
-  <div class="field-pattern"></div>
-  <div class="geo-circle" style="width:400px;height:400px;top:-100px;right:-100px;"></div>
-  <div class="geo-circle" style="width:250px;height:250px;bottom:-50px;left:-80px;"></div>
-  <div class="hero-content">
-    <div class="hero-badge">Propuesta de Patrocinio</div>
-    <h1 class="hero-title">
-      Copa Junior
-      <span>Internacional</span>
-    </h1>
-    <p class="hero-date">Del 9 al 12 de Octubre · 2026</p>
-    <p class="hero-location">Solanas Punta del Este · Uruguay</p>
-    <div class="hero-logos">
-      <span class="logo-text">Solanas</span>
-      <span class="logo-divider"></span>
-      <span class="logo-text">SMC</span>
-    </div>
-  </div>
-  <div class="hero-scroll-hint">
-    <span>Descubrí más</span>
-    <div class="scroll-arrow"></div>
-  </div>
+<!-- SLIDE 1 HERO -->
+<section class="slide s1">
+<div class="fl"></div>
+<div class="hc">
+<div class="hb">Propuesta de Patrocinio</div>
+<div class="hlogo"><img src="logos/logo-color-CJI.svg" style="height:min(320px,42vh);width:auto" alt="Copa Junior Internacional"></div>
+<p class="hd">Del 9 al 12 de Octubre — 2026</p>
+<p class="hl">Solanas Punta del Este — Uruguay</p>
+<div class="hls">
+<svg viewBox="0 0 140 60" width="120" xmlns="http://www.w3.org/2000/svg">
+<path d="M30 8C25 5 18 8 15 15C12 22 15 30 22 32L28 18C30 14 32 11 30 8Z" fill="#3489ca" opacity="0.9"/>
+<path d="M22 32L18 38C16 40 18 42 22 40L30 32C26 34 22 34 22 32Z" fill="#3489ca" opacity="0.7"/>
+<text x="12" y="52" font-family="Montserrat,sans-serif" font-weight="400" font-size="14" fill="rgba(255,255,255,0.5)" font-style="italic">solanas</text>
+<text x="12" y="60" font-family="Montserrat,sans-serif" font-weight="400" font-size="5" fill="rgba(255,255,255,0.3)" letter-spacing="2.5">Punta del Este</text>
+</svg>
+<span class="dv"></span>
+<svg viewBox="0 0 100 50" width="90" xmlns="http://www.w3.org/2000/svg">
+<path d="M50 5C45 5 42 12 45 20L55 35C58 28 60 18 55 10C53 7 51 5 50 5Z" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
+<circle cx="58" cy="8" r="3" fill="rgba(255,255,255,0.2)"/>
+<text x="50" y="42" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="400" font-size="8" fill="rgba(255,255,255,0.4)" letter-spacing="3">SMC</text>
+<text x="50" y="49" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="400" font-size="3.5" fill="rgba(255,255,255,0.25)" letter-spacing="0.5">Sport Management Creations</text>
+</svg>
+</div>
+</div>
+<div class="sa"><span>Descubrí más</span><div class="sarr"></div></div>
 </section>
 
-<!-- ═══ SLIDE 2 — MÁS QUE FÚTBOL ═══ -->
-<section class="slide slide-about">
-  <div class="inner">
-    <div class="section-label animate">Sobre el evento</div>
-    <h2 class="section-title animate animate-delay-1">Más que Fútbol</h2>
-    <p class="section-desc animate animate-delay-2">
-      La Copa Junior Internacional es una experiencia inolvidable para futbolistas, cuerpos técnicos y familiares. 
-      Además de medirse con grandes equipos, los participantes disfrutan de las impresionantes instalaciones de 
-      Solanas Punta del Este. Este evento combina nivel competitivo, naturaleza e intercambio cultural.
-    </p>
-    <div class="pillars">
-      <div class="pillar animate animate-delay-2">
-        <div class="pillar-icon">⚽</div>
-        <h3>Competencia de élite</h3>
-        <p>Equipos de múltiples países compitiendo en un formato profesional con Copa de Oro y Copa de Plata.</p>
-      </div>
-      <div class="pillar animate animate-delay-3">
-        <div class="pillar-icon">🌍</div>
-        <h3>Intercambio cultural</h3>
-        <p>Jugadores de distintas nacionalidades compartiendo la pasión por el fútbol en un entorno único.</p>
-      </div>
-      <div class="pillar animate animate-delay-4">
-        <div class="pillar-icon">🏖️</div>
-        <h3>Destino paradisíaco</h3>
-        <p>Punta del Este: playas, naturaleza y servicios premium para toda la familia.</p>
-      </div>
-      <div class="pillar animate animate-delay-5">
-        <div class="pillar-icon">🛡️</div>
-        <h3>21 años de experiencia</h3>
-        <p>Sport Management Creations: historial impecable de seguridad y calidad organizativa.</p>
-      </div>
+<!-- SLIDE 2 MÁS QUE FÚTBOL -->
+<section class="slide s2">
+<div class="inner" style="max-width:1100px">
+<div class="s2g">
+  <!-- Imagen izquierda -->
+  <div class="s2img a d2"><img src="fotos/Complejo.jpeg" style="width:100%;height:100%;object-fit:cover" alt="Complejo Solanas"></div>
+  <!-- Contenido derecha -->
+  <div>
+    <div class="slbl a">Sobre el evento</div>
+    <h2 class="stl a d1" style="color:var(--bl);margin-bottom:1rem">Más que Fútbol</h2>
+    <p class="sdsc a d2" style="margin-bottom:1.5rem;font-size:.95rem">La Copa Junior Internacional es una experiencia inolvidable para futbolistas, cuerpos técnicos y familiares. Este evento combina nivel competitivo, naturaleza e intercambio cultural en Solanas Punta del Este.</p>
+    <div class="abg a d3">
+      <div class="pl"><div class="plb">Competencia</div><h3>Élite Internacional</h3><p>Equipos de múltiples países en formato profesional con Copa de Oro y Copa de Plata.</p></div>
+      <div class="pl"><div class="plb">Cultura</div><h3>Intercambio Global</h3><p>Jugadores de distintas nacionalidades compartiendo la pasión por el fútbol.</p></div>
+      <div class="pl"><div class="plb">Destino</div><h3>Paraíso Costero</h3><p>Punta del Este: playas, naturaleza y servicios premium para toda la familia.</p></div>
+      <div class="pl"><div class="plb">Experiencia</div><h3>21 Años de Trayectoria</h3><p>Sport Management Creations: historial impecable de seguridad y calidad.</p></div>
     </div>
   </div>
+</div>
+</div>
 </section>
 
-<!-- ═══ SLIDE 3 — NÚMEROS ═══ -->
-<section class="slide slide-stats">
-  <div class="field-pattern"></div>
-  <div class="inner">
-    <div class="section-label animate">Edición 2025</div>
-    <h2 class="section-title animate animate-delay-1">La Primera Edición<br>en Números</h2>
-    <div class="stats-grid">
-      <div class="stat-card animate animate-delay-2">
-        <div class="stat-number">4</div>
-        <div class="stat-label">Días de torneo</div>
-        <div class="stat-sublabel">Experiencia all-inclusive</div>
-      </div>
-      <div class="stat-card animate animate-delay-3">
-        <div class="stat-number">8+</div>
-        <div class="stat-label">Categorías</div>
-        <div class="stat-sublabel">Masculino y femenino</div>
-      </div>
-      <div class="stat-card animate animate-delay-4">
-        <div class="stat-number">4</div>
-        <div class="stat-label">Partidos mínimo</div>
-        <div class="stat-sublabel">Garantizados por equipo</div>
-      </div>
-      <div class="stat-card animate animate-delay-5">
-        <div class="stat-number">🔴</div>
-        <div class="stat-label">YouTube Live</div>
-        <div class="stat-sublabel">Transmisión en vivo</div>
-      </div>
-      <div class="stat-card animate animate-delay-6">
-        <div class="stat-number">6</div>
-        <div class="stat-label">Sponsors</div>
-        <div class="stat-sublabel">Marcas asociadas</div>
-      </div>
-    </div>
-  </div>
+<!-- SLIDE 3 NÚMEROS -->
+<section class="slide s3">
+<div class="fl"></div>
+<div class="inner">
+<div class="slbl a" style="color:var(--gold-lt)">Edición 2025 — Resultados</div>
+<h2 class="stl a d1" style="color:var(--wh)">La Primera Edición en Números</h2>
+<div class="sr">
+<div class="sc a d2"><div class="sn">4</div><div class="sl">Días de torneo</div><div class="ss">Experiencia all-inclusive</div></div>
+<div class="sc a d3"><div class="sn">8+</div><div class="sl">Categorías</div><div class="ss">Masculino y femenino</div></div>
+<div class="sc a d4"><div class="sn">4</div><div class="sl">Partidos mínimo</div><div class="ss">Garantizados por equipo</div></div>
+<div class="sc a d5"><div class="sn">LIVE</div><div class="sl">YouTube</div><div class="ss">Transmisión en vivo</div></div>
+<div class="sc a d6"><div class="sn">6</div><div class="sl">Sponsors</div><div class="ss">Marcas asociadas</div></div>
+</div>
+<div class="si">
+<div>
+<div class="a d4" style="height:180px;border-radius:12px;overflow:hidden"><img src="fotos/trofeos y pelota.jpg" style="width:100%;height:100%;object-fit:cover" alt="Torneo 2025"></div>
+<p class="cap dk">### Foto del torneo 2025 — trofeos y pelota ###</p>
+</div>
+<div>
+<div class="a d5" style="height:180px;border-radius:12px;overflow:hidden"><img src="fotos/fotoequipo.jpg" style="width:100%;height:100%;object-fit:cover" alt="Equipos celebrando"></div>
+<p class="cap dk">### Foto de equipos celebrando ###</p>
+</div>
+</div>
+</div>
+</section>
+<!-- SLIDE 4 PROGRAMA -->
+<section class="slide s4">
+<div class="inner">
+<div class="slbl a">Cronograma</div>
+<h2 class="stl a d1" style="color:var(--bl)">Programa del Evento</h2>
+<div class="prgl">
+<div class="primg a d2" style="min-height:380px;border-radius:16px;overflow:hidden"><img src="fotos/Evento inagural.jpg" style="width:100%;height:100%;object-fit:cover" alt="Evento inaugural"></div>
+<div class="tl a d3">
+<div class="ti"><div class="td">VIE</div><div class="tc"><div class="dy">Viernes 9 de Octubre</div><h3>Recepción e Inauguración</h3><p>Recepción de equipos, bienvenida y ceremonia de apertura.</p></div></div>
+<div class="ti"><div class="td">SÁB</div><div class="tc"><div class="dy">Sábado 10 de Octubre</div><h3>Fase de Grupos</h3><p>Inicio de la competencia para todas las categorías.</p></div></div>
+<div class="ti"><div class="td">DOM</div><div class="tc"><div class="dy">Domingo 11 de Octubre</div><h3>Grupos y Semifinales</h3><p>Definición de grupos y semifinales.</p></div></div>
+<div class="ti"><div class="td">LUN</div><div class="tc"><div class="dy">Lunes 12 de Octubre</div><h3>Finales y Premiación</h3><p>Finales Copa de Oro y Copa de Plata. Entrega de premios.</p></div></div>
+</div>
+</div>
+</div>
 </section>
 
-<!-- ═══ SLIDE 4 — PROGRAMA ═══ -->
-<section class="slide slide-programa">
-  <div class="inner">
-    <div class="section-label animate">Cronograma</div>
-    <h2 class="section-title animate animate-delay-1">Programa del Evento</h2>
-    <div class="timeline">
-      <div class="timeline-item animate animate-delay-2">
-        <div class="timeline-dot">VIE</div>
-        <div class="timeline-content">
-          <div class="day-name">Viernes 9 de Octubre</div>
-          <h3>Recepción e Inauguración</h3>
-          <p>Recepción de equipos, bienvenida y ceremonia de apertura del torneo.</p>
-        </div>
-      </div>
-      <div class="timeline-item animate animate-delay-3">
-        <div class="timeline-dot">SÁB</div>
-        <div class="timeline-content">
-          <div class="day-name">Sábado 10 de Octubre</div>
-          <h3>Fase de Grupos</h3>
-          <p>Inicio de la competencia. Partidos de fase de grupos para todas las categorías.</p>
-        </div>
-      </div>
-      <div class="timeline-item animate animate-delay-4">
-        <div class="timeline-dot">DOM</div>
-        <div class="timeline-content">
-          <div class="day-name">Domingo 11 de Octubre</div>
-          <h3>Grupos y Semifinales</h3>
-          <p>Definición de grupos y semifinales. La competencia se intensifica.</p>
-        </div>
-      </div>
-      <div class="timeline-item animate animate-delay-5">
-        <div class="timeline-dot">LUN</div>
-        <div class="timeline-content">
-          <div class="day-name">Lunes 12 de Octubre</div>
-          <h3>Finales y Premiación</h3>
-          <p>Finales de Copa de Oro y Copa de Plata. Ceremonia de entrega de premios.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+<!-- SLIDE 5 CATEGORÍAS -->
+<section class="slide s5">
+<div class="fl"></div>
+<div class="inner">
+<div class="slbl a" style="color:var(--gold-lt)">Competencia</div>
+<h2 class="stl a d1" style="color:var(--wh)">Categorías y Formato</h2>
+<div class="cc">
+<div class="cb a d2"><h3>Fútbol Masculino</h3><div class="cr"><span class="y">2009 / 2010</span><span class="f">Fútbol 11</span></div><div class="cr"><span class="y">2011 / 2012</span><span class="f">Fútbol 11</span></div><div class="cr"><span class="y">2013 / 2014</span><span class="f">Fútbol 11</span></div><div class="cr"><span class="y">2015 / 2016</span><span class="f">Fútbol 7</span></div></div>
+<div class="cb a d3"><h3>Fútbol Femenino</h3><div class="cr"><span class="y">2009 / 2010</span><span class="f">Fútbol 7</span></div><div class="cr"><span class="y">2011 / 2012</span><span class="f">Fútbol 7</span></div><div class="cr"><span class="y">2013 / 2014</span><span class="f">Fútbol 7</span></div><div class="cr"><span class="y">2015 / 2016</span><span class="f">Fútbol 7</span></div></div>
+</div>
+<div class="fb a d4"><h4>Formato de la Copa</h4><p>Fase de grupos con clasificación por puntos y diferencia de gol + Eliminación directa</p><div class="ft"><span class="ftg">Copa de Oro — 1ros y 2dos</span><span class="ftg">Copa de Plata — 3ros, 4tos y otros</span></div></div>
+</div>
 </section>
 
-<!-- ═══ SLIDE 5 — CATEGORÍAS ═══ -->
-<section class="slide slide-categorias">
-  <div class="field-pattern"></div>
-  <div class="inner">
-    <div class="section-label animate">Competencia</div>
-    <h2 class="section-title animate animate-delay-1">Categorías y Formato</h2>
-    <div class="cat-grid">
-      <div class="cat-box animate animate-delay-2">
-        <h3><span class="cat-icon">⚽</span> Fútbol Masculino</h3>
-        <div class="cat-row"><span class="years">2009 / 2010</span><span class="format">Fútbol 11</span></div>
-        <div class="cat-row"><span class="years">2011 / 2012</span><span class="format">Fútbol 11</span></div>
-        <div class="cat-row"><span class="years">2013 / 2014</span><span class="format">Fútbol 11</span></div>
-        <div class="cat-row"><span class="years">2015 / 2016</span><span class="format">Fútbol 7</span></div>
-      </div>
-      <div class="cat-box animate animate-delay-3">
-        <h3><span class="cat-icon">⚽</span> Fútbol Femenino</h3>
-        <div class="cat-row"><span class="years">2009 / 2010</span><span class="format">Fútbol 7</span></div>
-        <div class="cat-row"><span class="years">2011 / 2012</span><span class="format">Fútbol 7</span></div>
-        <div class="cat-row"><span class="years">2013 / 2014</span><span class="format">Fútbol 7</span></div>
-        <div class="cat-row"><span class="years">2015 / 2016</span><span class="format">Fútbol 7</span></div>
-      </div>
-    </div>
-    <div class="format-info animate animate-delay-4">
-      <h4>Formato de la Copa</h4>
-      <p>Fase de grupos con clasificación por puntos y diferencia de gol + Eliminación directa</p>
-      <div class="format-badges">
-        <span class="format-badge">🥇 Copa de Oro — 1ros y 2dos</span>
-        <span class="format-badge">🥈 Copa de Plata — 3ros, 4tos y otros</span>
-      </div>
-    </div>
-  </div>
+<!-- SLIDE 6 SOLANAS -->
+<section class="slide s6">
+<div class="inner">
+<div class="slbl a">La Sede</div>
+<h2 class="stl a d1" style="color:var(--bl)">Solanas Resort, Punta del Este</h2>
+<div class="simg">
+<div class="a d2" style="height:200px;border-radius:12px;overflow:hidden"><img src="fotos/Complejo.jpeg" style="width:100%;height:100%;object-fit:cover" alt="Complejo Solanas"></div>
+<div class="a d3" style="height:200px;border-radius:12px;overflow:hidden"><img src="fotos/crystal view.jpeg" style="width:100%;height:100%;object-fit:cover" alt="Crystal Beach"></div>
+<div class="ph a d4" style="height:200px">Canchas de fútbol — PENDIENTE</div>
+</div>
+<p class="sdsc a d2">Uno de los mejores destinos de Sudamérica. Combina naturaleza, playa y servicios de primer nivel. El ambiente ideal para disfrutar del deporte y compartir momentos inolvidables.</p>
+<div class="sg">
+<div class="sf a d3"><div class="ic"></div><h4>Crystal Beach</h4><p>Playa artificial de primer nivel</p></div>
+<div class="sf a d3"><div class="ic"></div><h4>Canchas Top</h4><p>Superficies deportivas profesionales</p></div>
+<div class="sf a d4"><div class="ic"></div><h4>Alojamiento</h4><p>4 días / 3 noches all-inclusive</p></div>
+<div class="sf a d4"><div class="ic"></div><h4>Gastronomía</h4><p>Todas las comidas incluidas</p></div>
+<div class="sf a d5"><div class="ic"></div><h4>Gimnasio y Spa</h4><p>Instalaciones de bienestar</p></div>
+<div class="sf a d5"><div class="ic"></div><h4>Canchas de Tenis</h4><p>Áreas recreativas adicionales</p></div>
+</div>
+</div>
 </section>
 
-<!-- ═══ SLIDE 6 — SOLANAS ═══ -->
-<section class="slide slide-solanas">
-  <div class="inner">
-    <div class="section-label animate">La Sede</div>
-    <h2 class="section-title animate animate-delay-1">Solanas Resort<br>Punta del Este</h2>
-    <p class="section-desc animate animate-delay-2">
-      Uno de los mejores destinos de Sudamérica para hospedarse. Combina naturaleza, playa y 
-      servicios de primer nivel. El ambiente ideal para disfrutar del deporte y compartir momentos 
-      inolvidables con familiares y amigos.
-    </p>
-    <div class="solanas-features">
-      <div class="solanas-feat animate animate-delay-2">
-        <div class="feat-icon">🏊</div>
-        <h4>Crystal Beach</h4>
-        <p>Playa artificial de primer nivel mundial</p>
-      </div>
-      <div class="solanas-feat animate animate-delay-3">
-        <div class="feat-icon">🏟️</div>
-        <h4>Canchas Top</h4>
-        <p>Superficies deportivas profesionales</p>
-      </div>
-      <div class="solanas-feat animate animate-delay-4">
-        <div class="feat-icon">🏨</div>
-        <h4>Alojamiento</h4>
-        <p>4 días / 3 noches all-inclusive</p>
-      </div>
-      <div class="solanas-feat animate animate-delay-5">
-        <div class="feat-icon">🍽️</div>
-        <h4>Gastronomía</h4>
-        <p>Todas las comidas incluidas</p>
-      </div>
-      <div class="solanas-feat animate animate-delay-6">
-        <div class="feat-icon">💪</div>
-        <h4>Gimnasio & Spa</h4>
-        <p>Instalaciones de bienestar</p>
-      </div>
-      <div class="solanas-feat animate animate-delay-6">
-        <div class="feat-icon">🎾</div>
-        <h4>Canchas de Tenis</h4>
-        <p>Áreas recreativas adicionales</p>
-      </div>
-    </div>
-  </div>
+<!-- SLIDE 7 VISIBILIDAD -->
+<section class="slide s7">
+<div class="fl"></div>
+<div class="inner">
+<div class="slbl a" style="color:var(--gold-lt)">Dónde estará tu marca</div>
+<h2 class="stl a d1" style="color:var(--wh)">Espacios de Visibilidad</h2>
+<p class="vd a d2">Tu marca presente en cada momento clave del torneo. Desde la llegada hasta la premiación, en cada rincón del evento.</p>
+<div class="vg">
+<div class="vc a d2"><div class="ph dk vi" style="height:170px">Foto banners laterales en canchas</div><div class="vb"><h4>Banners en Canchas</h4><p>Cartelería lateral visible en cada partido durante los 4 días de torneo.</p></div></div>
+<div class="vc a d3"><div class="vi" style="height:170px;overflow:hidden"><img src="fotos/Arco de entrada.jpeg" style="width:100%;height:100%;object-fit:cover" alt="Arco de entrada"></div><div class="vb"><h4>Arco de Entrada</h4><p>Estructura de bienvenida con branding. Punto obligado de fotos.</p></div></div>
+<div class="vc a d4"><div class="vi" style="height:170px;overflow:hidden"><img src="fotos/trofeos.jpg" style="width:100%;height:100%;object-fit:cover" alt="Trofeos Copa Junior"></div><div class="vb"><h4>Trofeos y Premiación</h4><p>Logo en trofeos Copa de Oro y Plata. Presencia en la ceremonia.</p></div></div>
+<div class="vc a d2"><div class="vi" style="height:170px;overflow:hidden"><img src="fotos/festejo.jpg" style="width:100%;height:100%;object-fit:cover" alt="Festejo"></div><div class="vb"><h4>Indumentaria Staff y Árbitros</h4><p>Logo en remeras de staff, árbitros y voluntarios durante todo el evento.</p></div></div>
+<div class="vc a d3"><div class="vi" style="height:170px;overflow:hidden"><img src="fotos/Panel entrevista.jpeg" style="width:100%;height:100%;object-fit:cover" alt="Panel entrevista"></div><div class="vb"><h4>Transmisión en Vivo</h4><p>Logo en pantalla durante toda la transmisión por YouTube.</p></div></div>
+<div class="vc a d4"><div class="ph dk vi" style="height:170px">Redes sociales — PENDIENTE</div><div class="vb"><h4>Redes Sociales y Digital</h4><p>Presencia en posts, stories y reels de @copajuniorinter.</p></div></div>
+</div>
+</div>
 </section>
 
-<!-- ═══ SLIDE 7 — OPORTUNIDAD ═══ -->
-<section class="slide slide-oportunidad">
-  <div class="field-pattern"></div>
-  <div class="inner">
-    <div class="section-label animate">La propuesta</div>
-    <h2 class="section-title animate animate-delay-1">La Oportunidad<br>Para Tu Marca</h2>
-    <p class="oportunidad-desc animate animate-delay-2">
-      Asociá tu marca con los valores más positivos: deporte, juventud, internacionalidad y 
-      experiencias premium. Llegá a una audiencia de alto poder adquisitivo en un entorno único.
-    </p>
-    <div class="benefits-grid">
-      <div class="benefit animate animate-delay-3">
-        <div class="benefit-icon">📺</div>
-        <h4>Transmisión en Vivo</h4>
-        <p>Todos los partidos transmitidos por YouTube con visibilidad de marca en pantalla, gráficas y menciones.</p>
-      </div>
-      <div class="benefit animate animate-delay-4">
-        <div class="benefit-icon">📱</div>
-        <h4>Redes Sociales</h4>
-        <p>Presencia de marca en todo el contenido digital: Instagram, posts, stories, reels y material audiovisual profesional.</p>
-      </div>
-      <div class="benefit animate animate-delay-5">
-        <div class="benefit-icon">🏟️</div>
-        <h4>Visibilidad en Sede</h4>
-        <p>Cartelería, banners, merchandising y presencia física en uno de los complejos deportivos más premium de Sudamérica.</p>
-      </div>
-      <div class="benefit animate animate-delay-3">
-        <div class="benefit-icon">👨‍👩‍👧‍👦</div>
-        <h4>Audiencia ABC1</h4>
-        <p>Familias con alto poder adquisitivo, entrenadores y directivos de clubes: decisores de compra de múltiples países.</p>
-      </div>
-      <div class="benefit animate animate-delay-4">
-        <div class="benefit-icon">🌎</div>
-        <h4>Alcance Internacional</h4>
-        <p>Equipos de Argentina, Brasil, Uruguay, EEUU y más. Tu marca cruza fronteras con el fútbol como vehículo.</p>
-      </div>
-      <div class="benefit animate animate-delay-5">
-        <div class="benefit-icon">🎁</div>
-        <h4>Activaciones Únicas</h4>
-        <p>Presentes de sponsors para todos los participantes, sampling, stands y experiencias de marca en el evento.</p>
-      </div>
-    </div>
-  </div>
+<!-- SLIDE 8 OPORTUNIDAD -->
+<section class="slide s8">
+<div class="inner">
+<div class="slbl a">La propuesta</div>
+<h2 class="stl a d1" style="color:var(--bl)">La Oportunidad Para Tu Marca</h2>
+<p class="sdsc a d2">Asociá tu marca con los valores más positivos: deporte, juventud, internacionalidad y experiencias premium. Llegá a una audiencia de alto poder adquisitivo en un entorno único.</p>
+<div class="bg">
+<div class="bn a d2"><div class="bl2">Streaming</div><h4>Transmisión en Vivo</h4><p>Partidos por YouTube con tu marca en pantalla, gráficas y menciones.</p></div>
+<div class="bn a d3"><div class="bl2">Digital</div><h4>Redes Sociales</h4><p>Presencia en todo el contenido: Instagram, posts, stories y reels.</p></div>
+<div class="bn a d4"><div class="bl2">Presencial</div><h4>Visibilidad en Sede</h4><p>Cartelería, banners, merchandising y presencia física en Solanas.</p></div>
+<div class="bn a d5"><div class="bl2">Audiencia</div><h4>Público ABC1</h4><p>Familias con alto poder adquisitivo, entrenadores y directivos.</p></div>
+<div class="bn a d5"><div class="bl2">Alcance</div><h4>Llegada Internacional</h4><p>Equipos de Argentina, Brasil, Uruguay, EEUU y más.</p></div>
+<div class="bn a d6"><div class="bl2">Activación</div><h4>Experiencias de Marca</h4><p>Presentes, sampling, stands y activaciones exclusivas.</p></div>
+</div>
+</div>
 </section>
 
-<!-- ═══ SLIDE 8 — PAQUETES ═══ -->
-<section class="slide slide-paquetes">
-  <div class="inner">
-    <div class="section-label animate">Inversión</div>
-    <h2 class="section-title animate animate-delay-1">Paquetes de Patrocinio</h2>
-    <div class="tiers">
-      <div class="tier tier-oro animate animate-delay-2">
-        <div class="featured-tag">Máxima visibilidad</div>
-        <div class="tier-header">
-          <div class="tier-name">🥇 Sponsor Oro</div>
-          <div class="tier-sub">Naming rights & presencia total</div>
-        </div>
-        <div class="tier-body">
-          <ul>
-            <li>Naming rights del torneo o categoría</li>
-            <li>Logo principal en todas las piezas gráficas</li>
-            <li>Mención permanente en transmisión de YouTube</li>
-            <li>Stand exclusivo en el complejo Solanas</li>
-            <li>Pack de contenido personalizado (fotos + video)</li>
-            <li>Presentes de marca para todos los participantes</li>
-            <li>Publicaciones dedicadas en redes sociales</li>
-            <li>Logo en web copajunior.com con link</li>
-          </ul>
-        </div>
-      </div>
-      <div class="tier tier-plata animate animate-delay-3">
-        <div class="tier-header">
-          <div class="tier-name">🥈 Sponsor Plata</div>
-          <div class="tier-sub">Visibilidad destacada</div>
-        </div>
-        <div class="tier-body">
-          <ul>
-            <li>Logo en materiales gráficos del torneo</li>
-            <li>Presencia de marca en sede (banners)</li>
-            <li>Menciones en transmisión de YouTube</li>
-            <li>Publicaciones compartidas en redes</li>
-            <li>Logo en web copajunior.com</li>
-            <li>Sampling o activación en sede</li>
-          </ul>
-        </div>
-      </div>
-      <div class="tier tier-bronce animate animate-delay-4">
-        <div class="tier-header">
-          <div class="tier-name">🥉 Sponsor Bronce</div>
-          <div class="tier-sub">Presencia de marca</div>
-        </div>
-        <div class="tier-body">
-          <ul>
-            <li>Logo en web copajunior.com</li>
-            <li>Logo en materiales impresos</li>
-            <li>Presencia de marca en sede</li>
-            <li>Mención en redes sociales</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+<!-- SLIDE 9 PAQUETES -->
+<section class="slide s9">
+<div class="fl"></div>
+<div class="inner" style="text-align:center">
+<div class="slbl a" style="color:var(--gold-lt)">Inversión</div>
+<h2 class="stl a d1" style="color:var(--wh)">Paquetes de Patrocinio</h2>
+<div class="ts">
+<div class="tr to a d2" style="position:relative"><div class="ft2">Máxima visibilidad</div><div class="th"><div class="tn">Sponsor Oro</div><div class="tsb">Naming rights y presencia total</div></div><div class="tb"><ul><li>Naming rights del torneo o categoría</li><li>Logo principal en todas las piezas gráficas</li><li>Mención permanente en transmisión YouTube</li><li>Stand exclusivo en Solanas</li><li>Pack de contenido personalizado</li><li>Presentes de marca para participantes</li><li>Publicaciones dedicadas en redes</li><li>Logo en web con link directo</li></ul></div></div>
+<div class="tr tp a d3"><div class="th"><div class="tn">Sponsor Plata</div><div class="tsb">Visibilidad destacada</div></div><div class="tb"><ul><li>Logo en materiales gráficos</li><li>Presencia de marca en sede</li><li>Menciones en transmisión YouTube</li><li>Publicaciones compartidas en redes</li><li>Logo en web copajunior.com</li><li>Sampling o activación en sede</li></ul></div></div>
+<div class="tr tbr a d4"><div class="th"><div class="tn">Sponsor Bronce</div><div class="tsb">Presencia de marca</div></div><div class="tb"><ul><li>Logo en web copajunior.com</li><li>Logo en materiales impresos</li><li>Presencia de marca en sede</li><li>Mención en redes sociales</li></ul></div></div>
+</div>
+</div>
 </section>
 
-<!-- ═══ SLIDE 9 — EMPRESAS 2025 ═══ -->
-<section class="slide slide-empresas">
-  <div class="field-pattern"></div>
-  <div class="inner">
-    <div class="section-label animate">Track Record</div>
-    <h2 class="section-title animate animate-delay-1">Empresas que nos<br>Acompañaron en 2025</h2>
-    <p class="empresas-desc animate animate-delay-2">
-      En la primera edición de Copa Junior Internacional, estas marcas confiaron en nosotros 
-      y fueron parte de una experiencia única.
-    </p>
-    <div class="logos-grid">
-      <div class="logo-card animate animate-delay-2">
-        <div class="logo-name">Uruguay Natural</div>
-        <div class="logo-role">Marca País</div>
-      </div>
-      <div class="logo-card animate animate-delay-3">
-        <div class="logo-name">Solanas Sport</div>
-        <div class="logo-role">Canchas</div>
-      </div>
-      <div class="logo-card animate animate-delay-4">
-        <div class="logo-name">Intendencia de Maldonado</div>
-        <div class="logo-role">Gobierno Local</div>
-      </div>
-      <div class="logo-card animate animate-delay-5">
-        <div class="logo-name">Colonia Express</div>
-        <div class="logo-role">Transporte</div>
-      </div>
-      <div class="logo-card animate animate-delay-5">
-        <div class="logo-name">Vitale</div>
-        <div class="logo-role">Nutrición</div>
-      </div>
-      <div class="logo-card animate animate-delay-6">
-        <div class="logo-name">Asistencial Médica</div>
-        <div class="logo-role">Cobertura Médica</div>
-      </div>
-    </div>
-  </div>
+<!-- SLIDE 10 EMPRESAS -->
+<section class="slide s10">
+<div class="inner">
+<div class="slbl a">Track Record</div>
+<h2 class="stl a d1" style="color:var(--bl)">Empresas que nos Acompañaron en 2025</h2>
+<p class="ed a d2">En la primera edición de Copa Junior Internacional, estas marcas confiaron en nosotros y fueron parte de una experiencia única.</p>
+<div class="lr">
+<div class="lc c1 a d2">
+<svg viewBox="0 0 180 50" width="160" xmlns="http://www.w3.org/2000/svg">
+<circle cx="18" cy="25" r="12" fill="#F5A623" opacity="0.2"/><text x="18" y="29" text-anchor="middle" font-size="14">☀</text>
+<text x="38" y="22" font-family="Montserrat,sans-serif" font-weight="700" font-size="11" fill="#3489ca">Uruguay</text><text x="38" y="35" font-family="Montserrat,sans-serif" font-weight="400" font-size="11" fill="#3489ca" font-style="italic">Natural</text>
+</svg>
+<div class="lrl">Marca País</div></div>
+<div class="lc c2 a d3">
+<img src="logos/SolanasSport_logo_Final.png" style="max-height:50px;max-width:130px;object-fit:contain" alt="Solanas Sport">
+<div class="lrl">Canchas</div></div>
+<div class="lc c3 a d4">
+<svg viewBox="0 0 180 50" width="160" xmlns="http://www.w3.org/2000/svg">
+<rect x="8" y="8" width="24" height="32" rx="2" fill="none" stroke="#5D1A1A" stroke-width="1" opacity="0.4"/>
+<text x="20" y="28" text-anchor="middle" font-size="10" fill="#5D1A1A" opacity="0.5">🏛</text>
+<text x="52" y="18" font-family="Montserrat,sans-serif" font-weight="400" font-size="6" fill="#2a3a4a">Intendencia de</text>
+<text x="52" y="30" font-family="Montserrat,sans-serif" font-weight="700" font-size="11" fill="#2a3a4a">Maldonado</text>
+<text x="52" y="40" font-family="Montserrat,sans-serif" font-weight="400" font-size="4.5" fill="#666" letter-spacing="0.5">PARA SEGUIR ADELANTE</text>
+</svg>
+<div class="lrl">Gobierno Local</div></div>
+<div class="lc c4 a d2">
+<svg viewBox="0 0 180 40" width="160" xmlns="http://www.w3.org/2000/svg">
+<text x="12" y="16" font-size="16" fill="#00A3A3">✳</text>
+<text x="30" y="28" font-family="Montserrat,sans-serif" font-weight="700" font-size="14" fill="#2a3a4a">colonia</text><text x="103" y="28" font-family="Montserrat,sans-serif" font-weight="700" font-size="14" fill="#00A3A3">express</text>
+</svg>
+<div class="lrl">Transporte</div></div>
+<div class="lc c5 a d3">
+<svg viewBox="0 0 100 45" width="90" xmlns="http://www.w3.org/2000/svg">
+<circle cx="50" cy="20" r="16" fill="#26A69A"/>
+<text x="50" y="25" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="700" font-size="10" fill="#fff" font-style="italic">vitale</text>
+</svg>
+<div class="lrl">Nutrición</div></div>
+<div class="lc c6 a d4">
+<img src="logos/GenericoNoticiaAsistencial.jpg.jpeg" style="max-height:50px;max-width:130px;object-fit:contain" alt="Asistencial Médica">
+<div class="lrl">Cobertura Médica</div></div>
+</div>
+</div>
 </section>
 
-<!-- ═══ SLIDE 10 — CONTACTO ═══ -->
-<section class="slide slide-contacto">
-  <div class="inner">
-    <div class="section-label animate" style="color:var(--copa-dorado-light)">Próximos pasos</div>
-    <h2 class="contacto-title animate animate-delay-1">Agendá una reunión<br>con nuestro equipo</h2>
-    <p class="contacto-sub animate animate-delay-2">Los cupos para sponsors son limitados. Asegurá tu lugar en la Copa Junior Internacional 2026.</p>
-    <div class="contact-cards">
-      <div class="contact-card animate animate-delay-3">
-        <div class="name">Darío Stawski</div>
-        <div class="email">ds@sportcreations.com</div>
-        <div class="phone">+54 9 11 5958-6243</div>
-      </div>
-      <div class="contact-card animate animate-delay-4">
-        <div class="name">César Saban</div>
-        <div class="email">info@copajunior.com</div>
-        <div class="phone">+54 9 11 3075-7575</div>
-      </div>
-    </div>
-    <div class="contacto-links animate animate-delay-5">
-      <a href="https://copajunior.com" class="contacto-link" target="_blank">🌐 www.copajunior.com</a>
-      <a href="https://instagram.com/copajuniorinter" class="contacto-link" target="_blank">📸 @copajuniorinter</a>
-    </div>
-    <button class="contacto-cta animate animate-delay-5">Agendar Reunión</button>
-    <div class="contacto-footer animate animate-delay-6">
-      Copa Junior Internacional · Sport Management Creations · 21 años de experiencia
-    </div>
-  </div>
+<!-- SLIDE 11 CONTACTO -->
+<section class="slide s11">
+<div class="inner">
+<div class="slbl a" style="color:var(--gold-lt)">Próximos pasos</div>
+<h2 class="ctt a d1">Agendá una reunión<br>con nuestro equipo</h2>
+<p class="cts a d2">Los cupos para sponsors son limitados. Asegurá tu lugar en la Copa Junior Internacional 2026.</p>
+<div class="ccs">
+<div class="ccrd a d3"><div class="nm">Darío Stawski</div><div class="em">ds@sportcreations.com</div><div class="ph2">+54 9 11 5958-6243</div></div>
+<div class="ccrd a d4"><div class="nm">César Saban</div><div class="em">info@copajunior.com</div><div class="ph2">+54 9 11 3075-7575</div></div>
+</div>
+<div class="cls a d5"><a href="https://copajunior.com" class="cl" target="_blank">www.copajunior.com</a><a href="https://instagram.com/copajuniorinter" class="cl" target="_blank">@copajuniorinter</a></div>
+<button class="cbtn a d5">Agendar Reunión</button>
+<div class="cftr a d6">Copa Junior Internacional — Sport Management Creations — 21 años de experiencia</div>
+</div>
 </section>
 
 <script>
-// Intersection Observer for scroll animations
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
+const o=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('v')})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.a').forEach(el=>o.observe(el));
+document.querySelectorAll('.slide:not(.s1)').forEach(slide=>{
+  const lg=document.createElement('div');
+  lg.className='slide-logo';
+  lg.innerHTML='<img src="logos/logo-color-CJI.svg" alt="Copa Junior Internacional">';
+  slide.appendChild(lg);
+});
+function fitSlides(){
+  document.querySelectorAll('.slide').forEach(slide=>{
+    const inner=slide.querySelector('.inner');
+    if(!inner) return;
+    inner.style.zoom='';
+    const avail=slide.clientHeight-80;
+    const h=inner.scrollHeight;
+    if(h>avail) inner.style.zoom=Math.max(0.55,avail/h);
   });
-}, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
-
-document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+}
+fitSlides();
+window.addEventListener('resize',fitSlides);
 </script>
 </body>
 </html>
