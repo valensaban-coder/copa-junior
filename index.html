@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>@page{size:A4 landscape;margin:0}</style>
 <title>Copa Junior Internacional 2026 — Propuesta de Patrocinio</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 <style>
@@ -304,6 +305,13 @@ body{font-family:'Open Sans',sans-serif;color:var(--gr);background:var(--bk);ove
   .hls{margin-top:1rem}
   .slide-logo img{height:40px}
 }
+@media print{
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  html,body{height:auto;overflow:visible;scroll-snap-type:none}
+  .slide{min-height:0;height:100vh;page-break-after:always;break-after:page;scroll-snap-align:none;overflow:hidden}
+  .slide:last-of-type{page-break-after:avoid;break-after:avoid}
+  #pdf-btn{display:none!important}
+}
 </style>
 </head>
 <body>
@@ -533,5 +541,11 @@ function fitSlides(){
 fitSlides();
 window.addEventListener('resize',fitSlides);
 </script>
+
+<!-- BOTÓN EXPORTAR PDF -->
+<button id="pdf-btn" onclick="window.print()" title="Exportar PDF" style="position:fixed;bottom:1.5rem;left:1.5rem;z-index:1000;background:rgba(20,99,170,.92);color:#fff;border:none;border-radius:10px;padding:.6rem 1.1rem;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 18px rgba(0,0,0,.25);display:flex;align-items:center;gap:.5rem;transition:background .2s" onmouseover="this.style.background='rgba(20,99,170,1)'" onmouseout="this.style.background='rgba(20,99,170,.92)'">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+  Exportar PDF
+</button>
 </body>
 </html>
