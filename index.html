@@ -550,44 +550,71 @@ document.getElementById('pdf-btn').addEventListener('click', async function(){
   const btn = this;
   const btnTxt = document.getElementById('pdf-btn-txt');
   btn.disabled = true;
-  btnTxt.textContent = 'Generando...';
+
+  // Ocultar botón durante captura
+  btn.style.display = 'none';
+
+  // Forzar visibilidad de todos los elementos animados
+  const animated = document.querySelectorAll('.a');
+  animated.forEach(el => {
+    el.style.opacity = '1';
+    el.style.transform = 'translateY(0)';
+    el.style.animation = 'none';
+  });
+
+  // Desactivar scroll snap
+  const html = document.documentElement;
+  html.style.scrollSnapType = 'none';
+  document.body.style.overflow = 'auto';
+
+  const W = window.innerWidth;
+  const H = window.innerHeight;
+  const slides = Array.from(document.querySelectorAll('.slide'));
 
   const {jsPDF} = window.jspdf;
-  const pdf = new jsPDF({orientation:'landscape', unit:'mm', format:'a4'});
-  const pdfW = pdf.internal.pageSize.getWidth();
-  const pdfH = pdf.internal.pageSize.getHeight();
-
-  const slides = document.querySelectorAll('.slide');
-
-  // Mostrar todos los elementos animados
-  document.querySelectorAll('.a').forEach(el => el.classList.add('v'));
+  const pdf = new jsPDF({orientation:'landscape', unit:'px', format:[W, H]});
 
   for(let i = 0; i < slides.length; i++){
-    btnTxt.textContent = `Slide ${i+1}/${slides.length}...`;
-    const slide = slides[i];
+    btn.style.display = 'none';
+    btnTxt.textContent = `${i+1}/${slides.length}`;
 
-    // Scroll a la slide y esperar
-    slide.scrollIntoView();
-    await new Promise(r => setTimeout(r, 400));
+    // Scroll exacto a la slide
+    window.scrollTo({top: slides[i].offsetTop, behavior:'instant'});
+    await new Promise(r => setTimeout(r, 600));
 
-    const canvas = await html2canvas(slide, {
+    const canvas = await html2canvas(slides[i], {
       scale: 2,
       useCORS: true,
       allowTaint: true,
       logging: false,
-      width: window.innerWidth,
-      height: window.innerHeight,
-      windowWidth: window.innerWidth,
-      windowHeight: window.innerHeight,
+      x: 0,
+      y: 0,
+      width: W,
+      height: H,
+      scrollX: 0,
+      scrollY: 0,
+      windowWidth: W,
+      windowHeight: H,
     });
 
     const imgData = canvas.toDataURL('image/jpeg', 0.95);
-    if(i > 0) pdf.addPage();
-    pdf.addImage(imgData, 'JPEG', 0, 0, pdfW, pdfH);
+    if(i > 0) pdf.addPage([W, H], 'landscape');
+    pdf.addImage(imgData, 'JPEG', 0, 0, W, H);
   }
 
   pdf.save('Copa-Junior-Internacional-2026.pdf');
 
+  // Restaurar
+  html.style.scrollSnapType = '';
+  document.body.style.overflow = '';
+  animated.forEach(el => {
+    el.style.opacity = '';
+    el.style.transform = '';
+    el.style.animation = '';
+  });
+  window.scrollTo({top: 0, behavior:'instant'});
+
+  btn.style.display = 'flex';
   btn.disabled = false;
   btnTxt.textContent = 'Exportar PDF';
 });
