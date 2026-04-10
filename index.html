@@ -307,9 +307,9 @@ body{font-family:'Open Sans',sans-serif;color:var(--gr);background:var(--bk);ove
 }
 @media print{
   *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
-  html,body{height:auto;overflow:visible;scroll-snap-type:none}
-  .slide{min-height:0;height:100vh;page-break-after:always;break-after:page;scroll-snap-align:none;overflow:hidden}
-  .slide:last-of-type{page-break-after:avoid;break-after:avoid}
+  html,body{height:auto!important;overflow:visible!important;scroll-snap-type:none!important}
+  .slide{min-height:0!important;height:210mm!important;width:297mm!important;page-break-after:always!important;break-after:page!important;scroll-snap-align:none!important;overflow:hidden!important;display:flex!important}
+  .slide:last-of-type{page-break-after:avoid!important;break-after:avoid!important}
   #pdf-btn{display:none!important}
 }
 </style>
@@ -543,9 +543,32 @@ window.addEventListener('resize',fitSlides);
 </script>
 
 <!-- BOTÓN EXPORTAR PDF -->
-<button id="pdf-btn" onclick="window.print()" title="Exportar PDF" style="position:fixed;bottom:1.5rem;left:1.5rem;z-index:1000;background:rgba(20,99,170,.92);color:#fff;border:none;border-radius:10px;padding:.6rem 1.1rem;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 18px rgba(0,0,0,.25);display:flex;align-items:center;gap:.5rem;transition:background .2s" onmouseover="this.style.background='rgba(20,99,170,1)'" onmouseout="this.style.background='rgba(20,99,170,.92)'">
+<button id="pdf-btn" title="Exportar PDF" style="position:fixed;bottom:1.5rem;left:1.5rem;z-index:1000;background:rgba(20,99,170,.92);color:#fff;border:none;border-radius:10px;padding:.6rem 1.1rem;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 18px rgba(0,0,0,.25);display:flex;align-items:center;gap:.5rem;transition:background .2s" onmouseover="this.style.background='rgba(20,99,170,1)'" onmouseout="this.style.background='rgba(20,99,170,.92)'">
   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
   Exportar PDF
 </button>
+<script>
+document.getElementById('pdf-btn').addEventListener('click',function(){
+  const slides=document.querySelectorAll('.slide');
+  const html=document.documentElement;
+  // preparar
+  html.style.scrollSnapType='none';
+  slides.forEach(s=>{
+    s.style.minHeight='210mm';
+    s.style.height='210mm';
+    s.style.pageBreakAfter='always';
+  });
+  setTimeout(function(){
+    window.print();
+    // restaurar
+    html.style.scrollSnapType='';
+    slides.forEach(s=>{
+      s.style.minHeight='';
+      s.style.height='';
+      s.style.pageBreakAfter='';
+    });
+  },300);
+});
+</script>
 </body>
 </html>
